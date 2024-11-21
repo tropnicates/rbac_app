@@ -1,0 +1,60 @@
+.modal-container.open {
+    display: flex; 
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px; 
+    max-width: 90%;
+    position: relative;
+  }
+  
+  .modal-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .modal-content input,
+  .modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .modal-content button:hover {
+    background-color: #45a049;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .modal-content {
+      width: 90%; /* Adjust the modal width for smaller screens */
+    }
+  
+    .modal-content input,
+    .modal-content select {
+      font-size: 14px; /* Slightly smaller font on mobile */
+    }
+  
+    .modal-content button {
+      font-size: 14px;
+      padding: 10px 0;
+    }
+  }
+  

@@ -1,0 +1,27 @@
+/* Toggle Button Styles */
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #1e293b;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+  }
+  
+  .toggle-button:focus {
+    outline: none;
+  }
+  
+  /* Show toggle button on small screens */
+  @media (max-width: 768px) {
+    .toggle-button {
+      display: block;
+    }
+  }
+  
