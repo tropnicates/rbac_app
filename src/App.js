@@ -5,7 +5,7 @@ import Users from "./pages/Users";
 import Roles from "./pages/Roles";
 import Permissions from "./pages/Permissions";
 import Sidebar from "./components/Sidebar";
-import "./App.css";  // Separate App-specific styles
+import "./App.css";  
 
 function App() {
   return (

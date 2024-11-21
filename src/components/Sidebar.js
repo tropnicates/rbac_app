@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
-import ToggleButton from "./ToggleButton"; // Import the ToggleButton
+import ToggleButton from "./ToggleButton";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -12,9 +12,9 @@ const Sidebar = () => {
 
   return (
     <div>
-      <ToggleButton onClick={toggleSidebar} /> {/* Use the ToggleButton */}
+      <ToggleButton onClick={toggleSidebar} />
       <div className={`sidebar ${isSidebarOpen ? "active" : ""}`}>
-        <h3 className="sidebar-title">VRV Security</h3>
+        <div className="sidebar-title">VRV Security</div>
         <p className="sidebar-subtitle">Admin Dashboard</p>
         <ul className="sidebar-menu">
           <li>

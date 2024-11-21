@@ -1,17 +1,24 @@
+.modal{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-width: 100%;
+}
+
 .modal-container.open {
     display: flex; 
+    flex-direction: column;
+
   }
-  
+
   .modal-content {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-    width: 400px; 
-    max-width: 90%;
     position: relative;
   }
   
-  .modal-content h3 {
+  .modal-content .edit-btn {
     font-size: 18px;
     margin-bottom: 10px;
     text-align: center;
@@ -44,12 +51,12 @@
   
   @media screen and (max-width: 768px) {
     .modal-content {
-      width: 90%; /* Adjust the modal width for smaller screens */
+      width: 100%;
     }
   
     .modal-content input,
     .modal-content select {
-      font-size: 14px; /* Slightly smaller font on mobile */
+      font-size: 14px; 
     }
   
     .modal-content button {

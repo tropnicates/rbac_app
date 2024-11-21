@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./modal.css"
-
 const Modal = ({ isOpen, onClose, onSubmit, data, type }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     role: "User",
-    status: "Active",
+    status: "Active"
   });
 
   useEffect(() => {
@@ -15,19 +14,19 @@ const Modal = ({ isOpen, onClose, onSubmit, data, type }) => {
         name: data.name,
         email: data.email,
         role: data.role,
-        status: data.status,
+        status: data.status
       });
     }
   }, [data]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = () => {
     onSubmit(formData);
-    setFormData({ name: "", email: "", role: "User", status: "Active" });
+    setFormData({ name: "", email: "", role: "User", status: "Active" }); // Reset form after submit
   };
 
   if (!isOpen) return null;
@@ -35,7 +34,7 @@ const Modal = ({ isOpen, onClose, onSubmit, data, type }) => {
   return (
     <div className="modal">
       <div className="modal-content">
-        <h2>{data ? `Edit ${type}` : `Add ${type}`}</h2>
+        <div className="edit-btn">{data ? `Edit ${type}` : `Add ${type}`}</div>
         <label>Name</label>
         <input
           type="text"

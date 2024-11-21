@@ -1,0 +1,55 @@
+.users {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 15px 0;
+  color: #1e293b;
+  text-align: center;
+  padding: 15px;
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.validation-error {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.usermanagement {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1e293b;
+  text-align: center;
+}
+
+.btn-add {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #38bdf8;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #0284c7;
+}
+
+@media (max-width: 768px) {
+  .users {
+    font-size: 20px;
+    margin-top:3rem;
+    width: 100%;
+  }
+}

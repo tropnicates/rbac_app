@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import UserTable from "../components/UserTable";
 import Modal from "../components/Modal";
-import "./user.css";
+import { validateUserInput, validateRoleInput } from "../utils/validateInputs";  
+import "./users.css";
 
 const Users = () => {
   const [users, setUsers] = useState([
-    { id: 1, name: "Alice", email: "alice@example.com", role: "Admin", status: "Active" },
-    { id: 2, name: "Bob", email: "bob@example.com", role: "User", status: "Inactive" }
+    { id: 1, name: "Ravish Kumar", email: "raivsh@example.com", role: "Admin", status: "Active" },
+    { id: 2, name: "Mohit Mahto", email: "mohit@example.com", role: "User", status: "Inactive" }
   ]);
   const [modalOpen, setModalOpen] = useState(false);
   const [editingUser, setEditingUser] = useState(null);
+  const [validationError, setValidationError] = useState(""); 
 
   const handleEdit = (userId) => {
     const user = users.find(u => u.id === userId);
@@ -22,25 +24,36 @@ const Users = () => {
   };
 
   const handleModalSubmit = (userData) => {
+    const validation = validateUserInput(userData);
+    if (!validation.isValid) {
+      setValidationError(validation.message); 
+      return; 
+    }
+
     if (editingUser) {
       setUsers(users.map(u => u.id === editingUser.id ? { ...u, ...userData } : u));
     } else {
       setUsers([...users, { ...userData, id: Date.now(), status: "Active" }]);
     }
-    setModalOpen(false); 
+    setModalOpen(false);
     setEditingUser(null);
+    setValidationError(""); 
   };
 
   const handleAddUser = () => {
-    setEditingUser(null); 
-    setModalOpen(true); 
+    setEditingUser(null);
+    setModalOpen(true);
+    setValidationError("");
   };
 
   return (
-    <div className="users">
-      <div className="usermanagement">User Management</div>
+    <div>
+      <div className="users">User Management</div>
       <button onClick={handleAddUser} className="btn-add">Add User</button>
       <UserTable users={users} onEdit={handleEdit} onDelete={handleDelete} />
+      
+      {validationError && <div className="validation-error">{validationError}</div>}
+      
       <Modal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
