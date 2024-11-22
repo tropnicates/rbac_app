@@ -8,7 +8,6 @@
 .modal-container.open {
     display: flex; 
     flex-direction: column;
-
   }
 
   .modal-content {

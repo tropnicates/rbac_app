@@ -6,7 +6,6 @@ body {
   }
   
   .dashboard-container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -33,7 +32,6 @@ body {
     gap: 20px;
   }
   
-  /* Dashboard Card */
   .dashboard-card {
     background-color: #fff;
     width: 300px;

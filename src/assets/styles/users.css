@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafc;
+  color: #333;
+}
+
 .users {
   font-size: 22px;
   font-weight: 600;
@@ -21,14 +28,6 @@
   margin-bottom: 10px;
 }
 
-.usermanagement {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #1e293b;
-  text-align: center;
-}
-
 .btn-add {
   display: inline-block;
   padding: 10px 20px;
@@ -40,6 +39,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
 
 .btn-add:hover {

@@ -16,8 +16,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/users" element={<Users />} />
-            <Route path="/roles" element={<Roles />} />
             <Route path="/permissions" element={<Permissions />} />
+            <Route path="/roles" element={<Roles />} />
           </Routes>
         </div>
       </div>

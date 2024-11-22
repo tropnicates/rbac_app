@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PermissionList from "../components/PermissionsList"; 
-import "./Permissions.css"
+import "../assets/styles/Permissions.css"
 
 const Permissions = () => {
   const [permissions, setPermissions] = useState([

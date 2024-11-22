@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./modal.css"
+import "../assets/styles/modal.css"
 const Modal = ({ isOpen, onClose, onSubmit, data, type }) => {
   const [formData, setFormData] = useState({
     name: "",

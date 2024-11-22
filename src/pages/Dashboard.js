@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Dashboard.css";
+import "../assets/styles/Dashboard.css";
 
 const Dashboard = () => {
   return (
@@ -15,16 +15,17 @@ const Dashboard = () => {
           <div className="card-title">Users Management</div>
           <div className="card-description">View and manage users, assign roles, and more.</div>
         </Link>
-        <Link to="/roles" className="dashboard-card">
-          <span className="icon">📋</span>
-          <div className="card-title">Role Management</div>
-          <div className="card-description">Create and edit roles, define permissions for each role.</div>
-        </Link>
         <Link to="/permissions" className="dashboard-card">
           <span className="icon">🔐</span>
           <div className="card-title">Permissions Management</div>
           <div className="card-description">Customize permissions for users and roles dynamically.</div>
         </Link>
+        <Link to="/roles" className="dashboard-card">
+          <span className="icon">📋</span>
+          <div className="card-title">Role Management</div>
+          <div className="card-description">Create and edit roles, define permissions for each role.</div>
+        </Link>
+        
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import UserTable from "../components/UserTable";
 import Modal from "../components/Modal";
 import { validateUserInput, validateRoleInput } from "../utils/validateInputs";  
-import "./users.css";
+import "../assets/styles/users.css";
 
 const Users = () => {
   const [users, setUsers] = useState([

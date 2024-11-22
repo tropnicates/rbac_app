@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./RoleTable.css";
+import "../assets/styles/RoleTable.css";
 
 const RoleTable = ({ roles, onEdit, onDelete }) => {
   const [editingRole, setEditingRole] = useState(null);

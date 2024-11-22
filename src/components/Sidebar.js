@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Sidebar.css";
+import "../assets/styles/Sidebar.css";
 import ToggleButton from "./ToggleButton";
 
 const Sidebar = () => {
@@ -28,15 +28,16 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/roles" className="sidebar-link" onClick={toggleSidebar}>
-              Roles
-            </Link>
-          </li>
-          <li>
             <Link to="/permissions" className="sidebar-link" onClick={toggleSidebar}>
               Permissions
             </Link>
           </li>
+          <li>
+            <Link to="/roles" className="sidebar-link" onClick={toggleSidebar}>
+              Roles
+            </Link>
+          </li>
+          
         </ul>
       </div>
     </div>
