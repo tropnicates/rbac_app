@@ -210,5 +210,9 @@
     gap: 5px;
     justify-content: space-around;
   }
+  .role-form{
+    gap: 10px;
+
+  }
 
 }
