@@ -197,13 +197,4 @@
     font-size: 0.8rem;
     padding: 8px;
   }
-  
-  .permissions {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    justify-content: space-around;
-  }
-
 }
