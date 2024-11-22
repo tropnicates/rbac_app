@@ -48,17 +48,10 @@
 }
 
 @media (max-width: 768px) {
-  .user{
-    width: 100%;
-    margin-top: 3rem;
-    padding: 1rem;
-  }
-
   .usermanagement {
     font-size: 18px;
     padding: 10px;
     margin-bottom: 10px;
-    margin-top: 3rem;
   }
 
   .btn-add {
@@ -71,6 +64,7 @@
   .usermanagement {
     font-size: 16px;
     padding: 8px;
+    text-align: center;
   }
 
   .btn-add {
