@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import "../assets/styles/users.css";
 
 const Users = () => {
+  const [searchTerm, setSearchTerm] = useState(""); 
+  const [sortOption, setSortOption] = useState("");
   const [users, setUsers] = useState([
     { id: 1, name: "Ravish Kumar", email: "ravish@example.com", role: "Admin", status: "Active" },
     { id: 2, name: "Mohit Mahto", email: "mohit@example.com", role: "User", status: "Inactive" },
+    { id: 3, name: "Aarav Sharma", email: "aarav@example.com", role: "User", status: "Active" },
   ]);
 
   const [formData, setFormData] = useState({
@@ -22,6 +25,23 @@ const Users = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
+  const handleSortChange = (e) => {
+    const option = e.target.value;
+    setSortOption(option);
+
+    const sortedUsers = [...users];
+    if (option === "nameAsc") {
+      sortedUsers.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (option === "nameDesc") {
+      sortedUsers.sort((a, b) => b.name.localeCompare(a.name));
+    }
+    setUsers(sortedUsers);
+  };
+
+  const filteredUsers = users.filter((user) =>
+    user.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const handleEdit = (userId) => {
     const user = users.find((u) => u.id === userId);
@@ -98,6 +118,24 @@ const Users = () => {
           {isEditing ? "Update User" : "Add User"}
         </button>
       </form>
+      
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search by name..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="input-field"
+        />
+      </div>
+
+      <div className="sorting">
+        <select value={sortOption} onChange={handleSortChange} className="input-field">
+          <option value="">Sort By</option>
+          <option value="nameAsc">Name (A-Z)</option>
+          <option value="nameDesc">Name (Z-A)</option>
+        </select>
+      </div>
 
       {validationError && <div className="validation-error">{validationError}</div>}
 
@@ -112,7 +150,7 @@ const Users = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
+          {filteredUsers.map((user) => (
             <tr key={user.id}>
               <td>{user.name}</td>
               <td>{user.email}</td>

@@ -66,31 +66,70 @@ button {
 button:hover {
   background-color: #357ABD;
 }
-
 .permissions-checkboxes {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px; /* Adds spacing between checkboxes */
+  padding: 10px;
 }
 
 .checkbox-label {
-  /* display: flex; */
-  /* align-items: center; */
-  gap: 5px;
-  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Spacing between checkbox and label */
+  font-size: 0.95rem;
+  color: #555;
+  cursor: pointer;
 }
 
-.permission-list {
-  /* display: flex; */
-  /* flex-direction: column; */
-  gap: 10px;
-  width: 100%;
+.checkbox-label input[type="checkbox"] {
+  accent-color: #4A90E2; /* Changes checkbox highlight color */
+  cursor: pointer;
 }
+
+.permissions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.permissions-row:hover {
+  background-color: #f9fafc;
+}
+
+.permission-actions button {
+  margin-left: auto;
+  background-color: #357ABD;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.permission-actions button:hover {
+  background-color: #357ABD;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #357ABD; 
+  cursor: pointer;
+}
+
+.checkbox-label:hover {
+  color: #357ABD;
+}
+
 
 
 @media (max-width: 768px) {
