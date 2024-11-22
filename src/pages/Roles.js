@@ -92,10 +92,11 @@ const Roles = () => {
           onChange={handleInputChange}
           className="input-field"
         />
-        <textarea
-          name="description"
-          value={formData.description}
-          placeholder="Enter Role Description"
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          placeholder="Enter Description"
           onChange={handleInputChange}
           className="input-field"
         />
