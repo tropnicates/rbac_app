@@ -86,7 +86,7 @@ const Roles = () => {
       <form onSubmit={handleFormSubmit} className="role-form">
         <input
           type="text"
-          name="name"
+          name="name"  // Use name="name" for the role name
           value={formData.name}
           placeholder="Enter Role Name"
           onChange={handleInputChange}
@@ -94,8 +94,8 @@ const Roles = () => {
         />
         <input
           type="text"
-          name="name"
-          value={formData.name}
+          name="description"  // Use name="description" for the role description
+          value={formData.description}
           placeholder="Enter Description"
           onChange={handleInputChange}
           className="input-field"
