@@ -2,6 +2,7 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #f9f9f9;
   color: #333;
+  width: 100%;
 }
 
 .user {
@@ -117,6 +118,10 @@ body {
   .user {
     padding: 15px;
   }
+  .user-table{
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+  }
 
   .user-form {
     flex-direction: column;
@@ -130,6 +135,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
     margin-bottom: 20px;
   }
 
