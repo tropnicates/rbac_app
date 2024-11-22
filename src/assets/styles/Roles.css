@@ -1,34 +1,176 @@
+
+
 .role {
-  margin: 0;
-  padding: 0;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.rolemanagement{
-  font-size: 22px;
-  font-weight: 600;
-  margin: 15px 0;
-  color: #1e293b;
+/* Header */
+.rolemanagement {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
   text-align: center;
-  padding: 15px;
-  background-color: #f3f4f6;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s ease-in-out;
+  color: #4A90E2;
 }
 
+/* Form Styling */
+.role-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.permissions label {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 1.2rem;
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #357ABD;
+}
+
+.validation-error {
+  color: #D8000C;
+  background-color: #FFBABA;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.role-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.role-table th,
+.role-table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.role-table th {
+  background-color: #4A90E2;
+  color: #fff;
+}
+
+.role-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.action-btn {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.action-btn.edit {
+  background-color: #FFD700;
+}
+
+.action-btn.edit:hover {
+  background-color: #357ABD;
+}
+
+.action-btn.delete {
+  background-color: #357ABD;
+}
+
+.action-btn.delete:hover {
+  background-color: #B00008;
+}
 
 @media (max-width: 768px) {
   .role {
-    font-size: 20px;
-    margin-top: 3rem;
-    width: 100%;
+    padding: 15px;
   }
+
+  .role-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .action-btn.edit, .action-btn.delete{
+    width: 4rem;
+  }
+
+.permissions label {
+  margin-top: 0;
 }
 
+.action-btn.edit{
+  margin-bottom: 5px;
+}
+
+  .input-field {
+    width: 100%;
+  }
+
+  .btn-submit {
+    align-self: center;
+  }
+
+  .role-table th,
+  .role-table td {
+    font-size: 0.9rem;
+  }
+
+}
 
 @media (max-width: 480px) {
+  .role{
+    margin-top: 3rem;
+
+  }
   .rolemanagement {
-    font-size: 16px;
+    font-size: 1.5rem;
+  }
+  .permissions label {
+    margin-top: 0;
+  }
+    
+.action-btn.edit{
+  margin-bottom: 5px;
+}
+
+  .role-table th,
+  .role-table td {
+    font-size: 0.8rem;
     padding: 8px;
   }
+  
 }

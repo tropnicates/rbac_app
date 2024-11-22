@@ -1,17 +1,26 @@
 import React from "react";
 
-const PermissionList = ({ permissions, onChange }) => {
+const PermissionList = ({ roles, onPermissionChange }) => {
+  const allPermissions = ["Read", "Write", "Delete"];
+
   return (
-    <div className="permission-list">
+    <div className="permissions-list">
       <h3>Permissions</h3>
-      {permissions.map((permission, index) => (
-        <div key={index} className="permission-item">
-          <input
-            type="checkbox"
-            checked={permission.granted}
-            onChange={() => onChange(index)}
-          />
-          <span>{permission.name}</span>
+      {roles.map((role) => (
+        <div key={role.id} className="role-permissions">
+          <h4>{role.name}</h4>
+          <div className="permissions-checkboxes">
+            {allPermissions.map((permission) => (
+              <label key={permission} className="checkbox-label">
+                <input
+                  type="checkbox"
+                  checked={role.permissions.includes(permission)}
+                  onChange={() => onPermissionChange(role.id, permission)}
+                />
+                {permission}
+              </label>
+            ))}
+          </div>
         </div>
       ))}
     </div>

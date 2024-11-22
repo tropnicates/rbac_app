@@ -1,8 +1,88 @@
 .permissions-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   padding: 20px;
   background-color: #f8fafc;
   min-height: 100vh;
 }
+
+.permissions-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4A90E2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+  /* Role Table */
+  .role-table-container {
+    margin-bottom: 20px;
+  }
+  
+  .role-table-header {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  
+  .role-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .role-table th, .role-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .role-table th {
+    background-color: #4A90E2;
+    color: #fff;
+  }
+  
+  .role-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  button {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background-color: #357ABD;
+  }
+  
+  /* Permissions Checkbox List */
+  .permissions-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
 
 .permission {
   font-size: 1.8rem;
