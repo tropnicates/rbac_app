@@ -3,7 +3,6 @@ import PermissionList from "../components/PermissionsList";
 import RoleTable from "../components/RoleTable"; 
 import Modal from "../components/Modal"; 
 import "../assets/styles/Permissions.css";
-import "../assets/styles/Roles.css"
 
 const Permissions = () => {
   const [roles, setRoles] = useState([

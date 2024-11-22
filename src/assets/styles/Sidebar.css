@@ -14,7 +14,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: #38bdf8;
+    color: #357ABD;
     text-align: center;
   }
   
@@ -25,7 +25,6 @@
     color: #94a3b8;
   }
   
-  /* Sidebar Menu */
   .sidebar-menu {
     list-style: none;
     padding: 0;
@@ -47,7 +46,7 @@
   
   .sidebar-link:hover {
     background-color: #475569;
-    color: #38bdf8;
+    color: #357ABD;
   }
   
   @media (max-width: 768px) {

@@ -12,7 +12,7 @@
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
-  color: #4A90E2;
+  color: #357ABD;
 
 }
 
@@ -26,7 +26,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);}
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 .input-field {
   flex: 1;
@@ -46,7 +47,7 @@
 .btn-submit {
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #4A90E2;
+  background-color: #357ABD;
   color: white;
   border: none;
   border-radius: 4px;
@@ -81,7 +82,7 @@
 }
 
 .role-table th {
-  background-color: #4A90E2;
+  background-color: #357ABD;
   color: #fff;
 }
 
@@ -138,12 +139,12 @@
   }
   
 .btn-submit {
-  padding: 10px 20px;
-  font-size: 0.8rem;
+  padding: 10px 10px;
+  font-size: 1rem;
 }
 
   .role-form {
-    gap: 15px;
+    gap: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -176,7 +177,6 @@
     gap: 5px; 
     padding: 10px;
   }
-
 }
 
 @media (max-width: 480px) {
