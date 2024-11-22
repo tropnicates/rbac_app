@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import PermissionList from "../components/PermissionsList";
-import RoleTable from "../components/RoleTable"; // New component to manage roles
-import Modal from "../components/Modal"; // Modal for adding/editing roles
+import RoleTable from "../components/RoleTable"; 
+import Modal from "../components/Modal"; 
 import "../assets/styles/Permissions.css";
+import "../assets/styles/Roles.css"
 
 const Permissions = () => {
   const [roles, setRoles] = useState([
