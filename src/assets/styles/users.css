@@ -1,11 +1,9 @@
-body {
+.user {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f9fafc;
-  color: #333;
+  padding: 0;
 }
 
-.users {
+.usermanagement{
   font-size: 22px;
   font-weight: 600;
   margin: 15px 0;
@@ -29,7 +27,9 @@ body {
 }
 
 .btn-add {
-  display: inline-block;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
   padding: 10px 20px;
   background-color: #38bdf8;
   color: #ffffff;
@@ -47,7 +47,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .users {
+  .user {
     font-size: 20px;
     margin-top:3rem;
     width: 100%;

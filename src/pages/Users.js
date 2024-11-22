@@ -47,13 +47,11 @@ const Users = () => {
   };
 
   return (
-    <div>
-      <div className="users">User Management</div>
+    <div className="user">
+      <div className="usermanagement">User Management</div>
       <button onClick={handleAddUser} className="btn-add">Add User</button>
       <UserTable users={users} onEdit={handleEdit} onDelete={handleDelete} />
-      
       {validationError && <div className="validation-error">{validationError}</div>}
-      
       <Modal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}

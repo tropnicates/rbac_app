@@ -44,8 +44,8 @@ const Roles = () => {
   };
 
   return (
-    <div className="roles-container">
-      <h2 className="roles-header">Role Management</h2>
+    <div className="role">
+      <div className="rolemanagement">Role Management</div>
       <RoleTable roles={roles} onEdit={handleEdit} onDelete={handleDelete} />
       {modalOpen && (
         <Modal
