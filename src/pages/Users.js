@@ -119,7 +119,8 @@ const Users = () => {
         </button>
       </form>
       
-      <div className="search-bar">
+      <div className="sortsearch">
+        <div className="search-bar">
         <input
           type="text"
           placeholder="Search by name..."
@@ -135,6 +136,7 @@ const Users = () => {
           <option value="nameAsc">Name (A-Z)</option>
           <option value="nameDesc">Name (Z-A)</option>
         </select>
+      </div>
       </div>
 
       {validationError && <div className="validation-error">{validationError}</div>}
