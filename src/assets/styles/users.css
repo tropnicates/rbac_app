@@ -150,6 +150,7 @@ body {
 @media (max-width: 480px) {
    .user {
     padding: 20px;
+    margin-top: 3rem;
   }
   
   .user-form {
