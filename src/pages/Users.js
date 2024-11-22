@@ -1,84 +1,77 @@
 import React, { useState } from "react";
+import { formatUserData } from "../utils/formatPermissions";
+import { validateUserInput } from "../utils/validateInputs";
 import "../assets/styles/users.css";
 
 const Users = () => {
-  const [searchTerm, setSearchTerm] = useState(""); 
-  const [sortOption, setSortOption] = useState("");
   const [users, setUsers] = useState([
     { id: 1, name: "Ravish Kumar", email: "ravish@example.com", role: "Admin", status: "Active" },
     { id: 2, name: "Mohit Mahto", email: "mohit@example.com", role: "User", status: "Inactive" },
-    { id: 3, name: "Aarav Sharma", email: "aarav@example.com", role: "User", status: "Active" },
   ]);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    role: "User",
-    status: "Active",
-  });
-
+  const [formData, setFormData] = useState({ name: "", email: "", role: "User", status: "Active" });
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
   const [validationError, setValidationError] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortField, setSortField] = useState("name");
+  const [sortOrder, setSortOrder] = useState("asc");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSortChange = (e) => {
-    const option = e.target.value;
-    setSortOption(option);
-
-    const sortedUsers = [...users];
-    if (option === "nameAsc") {
-      sortedUsers.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (option === "nameDesc") {
-      sortedUsers.sort((a, b) => b.name.localeCompare(a.name));
-    }
-    setUsers(sortedUsers);
-  };
-
-  const filteredUsers = users.filter((user) =>
-    user.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  const handleEdit = (userId) => {
-    const user = users.find((u) => u.id === userId);
-    setFormData({ ...user });
-    setIsEditing(true);
-    setEditId(userId);
-    setValidationError("");
-  };
-
-  const handleDelete = (userId) => {
-    setUsers(users.filter((u) => u.id !== userId));
-  };
-
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    const formattedData = formatUserData(formData);
+    const validation = validateUserInput(formattedData);
 
-    if (!formData.name || !formData.email || !formData.role || !formData.status) {
-      setValidationError("All fields are required.");
+    if (!validation.isValid) {
+      setValidationError(validation.message);
       return;
     }
 
     if (isEditing) {
-      setUsers(users.map((u) => (u.id === editId ? { ...u, ...formData } : u)));
+      setUsers(users.map((u) => (u.id === editId ? { ...u, ...formattedData } : u)));
       setIsEditing(false);
     } else {
-      setUsers([...users, { ...formData, id: Date.now() }]);
+      setUsers([...users, { ...formattedData, id: Date.now() }]);
     }
 
     setFormData({ name: "", email: "", role: "User", status: "Active" });
-    setEditId(null);
     setValidationError("");
   };
+
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value.toLowerCase());
+  };
+
+  const handleSort = (field) => {
+    const newSortOrder = sortField === field && sortOrder === "asc" ? "desc" : "asc";
+    setSortField(field);
+    setSortOrder(newSortOrder);
+
+    const sortedUsers = [...users].sort((a, b) => {
+      if (a[field] < b[field]) return newSortOrder === "asc" ? -1 : 1;
+      if (a[field] > b[field]) return newSortOrder === "asc" ? 1 : -1;
+      return 0;
+    });
+
+    setUsers(sortedUsers);
+  };
+
+  const filteredUsers = users.filter(
+    (user) =>
+      user.name.toLowerCase().includes(searchQuery) ||
+      user.email.toLowerCase().includes(searchQuery) ||
+      user.role.toLowerCase().includes(searchQuery) ||
+      user.status.toLowerCase().includes(searchQuery)
+  );
 
   return (
     <div className="user">
       <div className="usermanagement">User Management</div>
-
       <form onSubmit={handleFormSubmit} className="user-form">
         <input
           type="text"
@@ -118,28 +111,29 @@ const Users = () => {
           {isEditing ? "Update User" : "Add User"}
         </button>
       </form>
-      
-      <div className="sortsearch">
-        <div className="search-bar">
+      {validationError && <div className="validation-error">{validationError}</div>}
+
+      <div className="search-sort">
         <input
           type="text"
-          placeholder="Search by name..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="input-field"
+          placeholder="Search users..."
+          value={searchQuery}
+          onChange={handleSearch}
+          className="input-field search-bar"
         />
+        <button
+          onClick={() => handleSort("name")}
+          className="sort-btn"
+        >
+          Sort by Name {sortField === "name" && (sortOrder === "asc" ? "↑" : "↓")}
+        </button>
+        <button
+          onClick={() => handleSort("email")}
+          className="sort-btn"
+        >
+          Sort by Email {sortField === "email" && (sortOrder === "asc" ? "↑" : "↓")}
+        </button>
       </div>
-
-      <div className="sorting">
-        <select value={sortOption} onChange={handleSortChange} className="input-field">
-          <option value="">Sort By</option>
-          <option value="nameAsc">Name (A-Z)</option>
-          <option value="nameDesc">Name (Z-A)</option>
-        </select>
-      </div>
-      </div>
-
-      {validationError && <div className="validation-error">{validationError}</div>}
 
       <table className="user-table">
         <thead>
@@ -159,10 +153,20 @@ const Users = () => {
               <td>{user.role}</td>
               <td>{user.status}</td>
               <td>
-                <button onClick={() => handleEdit(user.id)} className="action-btn edit">
+                <button
+                  onClick={() => {
+                    setFormData({ ...user });
+                    setIsEditing(true);
+                    setEditId(user.id);
+                  }}
+                  className="action-btn edit"
+                >
                   Edit
                 </button>
-                <button onClick={() => handleDelete(user.id)} className="action-btn delete">
+                <button
+                  onClick={() => setUsers(users.filter((u) => u.id !== user.id))}
+                  className="action-btn delete"
+                >
                   Delete
                 </button>
               </td>

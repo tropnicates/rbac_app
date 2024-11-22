@@ -1,18 +1,16 @@
-/* App Container */
 .app-container {
   display: flex;
   min-height: 100vh;
 }
 
-/* Main Content Area */
 .main-content {
   flex: 1;
   padding: 20px;
-  margin-left: 260px; /* Adjust for the sidebar */
+  margin-left: 260px; 
 }
 
 @media (max-width: 768px) {
   .main-content {
-    margin-left: 0; /* Sidebar will overlay in small screens */
+    margin-left: 0; 
   }
 }
