@@ -1,14 +1,8 @@
 .permissions-container {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
   background-color: #fff;
-  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
 }
 
 .permissions-header {
@@ -17,11 +11,7 @@
   color: #4A90E2;
   margin-bottom: 20px;
   text-align: center;
-}
-
-.role-table-container {
-  width: 100%;
-  margin-bottom: 20px;
+  padding: 20px;
 }
 
 .role-table-header {
@@ -29,6 +19,10 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .role-table {
@@ -53,6 +47,7 @@
 }
 
 button {
+  margin-top: 10px;
   background-color: #4A90E2;
   color: white;
   border: none;
@@ -67,55 +62,21 @@ button:hover {
   background-color: #357ABD;
 }
 
-/* Permissions Section */
 .permissions-checkboxes {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  margin-top: 10px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .checkbox-label {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 5px;
-}
-
-.permission-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
-}
-
-.permission-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-
-.permission-item span {
-  font-size: 1rem;
-  color: #1e293b;
-}
-
-.permission-item button {
-  padding: 8px 16px;
-  font-size: 0.9rem;
-  background-color: #38bdf8;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.permission-item button:hover {
-  background-color: #0284c7;
 }
 
 .permission-item button:disabled {
@@ -123,63 +84,11 @@ button:hover {
   cursor: not-allowed;
 }
 
-/* Modal */
-.modal-content {
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #fff;
-}
-
-.modal-header {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.modal-close-button {
-  background-color: transparent;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #4A90E2;
-}
-
-.modal-close-button:hover {
-  color: #357ABD;
-}
-
-/* Button styles for Submit */
-.btn-submit {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #4A90E2;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-submit:hover {
-  background-color: #357ABD;
-}
-
-/* Media Queries */
 @media (max-width: 768px) {
   .permissions-container {
     padding: 15px;
-    margin-top: 3rem;
   }
 
-  .permissions-header {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-  }
-
-  .role-table th, .role-table td {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
 
   .permission-item button {
     font-size: 0.8rem;
