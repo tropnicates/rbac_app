@@ -1,9 +1,12 @@
 .user {
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.usermanagement{
+.usermanagement {
   font-size: 22px;
   font-weight: 600;
   margin: 15px 0;
@@ -14,11 +17,12 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.5s ease-in-out;
+  width: 100%;
+  max-width: 600px;
 }
 
 .validation-error {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   color: red;
@@ -27,9 +31,6 @@
 }
 
 .btn-add {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-end;
   padding: 10px 20px;
   background-color: #38bdf8;
   color: #ffffff;
@@ -39,7 +40,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  
+  margin-bottom: 15px;
 }
 
 .btn-add:hover {
@@ -47,9 +48,34 @@
 }
 
 @media (max-width: 768px) {
-  .user {
-    font-size: 20px;
-    margin-top:3rem;
+  .user{
     width: 100%;
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+
+  .usermanagement {
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 3rem;
+  }
+
+  .btn-add {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .usermanagement {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .btn-add {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    width: 90%;
   }
 }
