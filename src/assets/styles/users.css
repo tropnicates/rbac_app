@@ -116,16 +116,13 @@ body {
 
 @media (max-width: 768px) {
   .user {
-    padding: 15px;
-  }
-  .user-table{
-    margin-left: 1rem;
-    margin-right: 0.5rem;
+    padding: 20px;
   }
 
   .user-form {
     flex-direction: column;
     gap: 15px;
+    padding: 10px;
   }
 
   .user-form {
@@ -151,11 +148,26 @@ body {
 }
 
 @media (max-width: 480px) {
-  .user{
-    margin-top: 3rem;
+   .user {
+    padding: 20px;
   }
-  .usermanagement {
-    font-size: 1.5rem;
+  
+  .user-form {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .user-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 20px;
   }
 
   .user-table th,
