@@ -182,7 +182,6 @@
 @media (max-width: 480px) {
   .role {
     margin-top: 3rem;
-
   }
 
   .rolemanagement {
@@ -214,6 +213,11 @@
   .role-form{
     gap: 10px;
 
+  }
+
+  .btn-submit {
+    padding: 5px 15px;
+    font-size: 1rem;
   }
 
 }
