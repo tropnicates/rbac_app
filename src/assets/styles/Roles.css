@@ -175,7 +175,7 @@
   .permissions {
     flex-direction: column; 
     gap: 5px; 
-    padding: 5px;
+    padding: 10px;
   }
 }
 
@@ -211,7 +211,7 @@
     justify-content: space-around;
   }
   .role-form{
-    gap: 15px;
+    gap: 10px;
 
   }
 
