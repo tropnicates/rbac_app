@@ -148,6 +148,7 @@
   .modal-buttons button {
     font-size: 12px;
     padding: 8px;
+    width: 50px;
   }
 }
 
