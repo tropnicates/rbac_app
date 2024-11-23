@@ -142,6 +142,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: none;
   }
 
   .action-btn.edit,
@@ -156,7 +157,7 @@
   .input-field {
     width: 100%;
     gap: 10px;
-
+    box-shadow: none;
   }
 
   .role-table th,
