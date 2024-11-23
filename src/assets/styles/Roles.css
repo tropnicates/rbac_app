@@ -204,11 +204,13 @@
     justify-content: center;
     gap: 10px; 
     padding: 10px;
-    font-size: 0.8rem; 
+    font-size: 0.8rem;
+    width: 100%; 
   }
 
   .permission-item {
     justify-content: center; 
+    align-items: center;
   }
 }
 
