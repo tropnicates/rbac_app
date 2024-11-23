@@ -173,7 +173,7 @@
     font-size: 0.9rem;
   }
   .permissions {
-    flex-direction: column; 
+    flex-direction: row; 
     gap: 5px; 
     padding: 10px;
   }
@@ -209,6 +209,7 @@
     align-items: center;
     gap: 5px;
     justify-content: space-around;
+    padding: 5px;
   }
   .role-form{
     gap: 15px;
