@@ -202,7 +202,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px; 
+    gap: 30px; 
     padding: 10px;
     font-size: 0.8rem;
     width: 100%; 
@@ -212,44 +212,4 @@
     justify-content: center; 
     align-items: center;
   }
-}
-
-@media (max-width: 480px) {
-  .role {
-    margin-top: 3rem;
-  }
-
-  .rolemanagement {
-    font-size: 1.5rem;
-  }
-
-  .action-btn.edit {
-    margin-bottom: 5px;
-  }
-
-  .role-table th,
-  .role-table td {
-    font-size: 0.8rem;
-    padding: 8px;
-  }
-/*   
-  .permissions {
-    gap: 8px; 
-    padding: 8px;
-    font-size: 0.75rem; 
-  }
-
-  .permission-item {
-    flex-direction: row; 
-    justify-content: space-between; 
-  } */
-  .role-form{
-    gap: 15px;
-  }
-
-  /* .btn-submit {
-    padding: 5px 5px;
-    font-size: 1rem;
-  } */
-
 }
