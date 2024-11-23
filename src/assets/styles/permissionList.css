@@ -1,14 +1,12 @@
 .permissions-list {
   width: 100%;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
+  /* max-width: 900px; */
+  padding: 10px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .title{
@@ -18,16 +16,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
-
-}
-
-.container-list {
-  font-size: 1.6rem;
-  font-weight: 600;
-  /* color: #4A90E2; */
-  margin-bottom: 20px;
-  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .role-permissions {
@@ -44,30 +35,24 @@
   background-color: #f9fafc;
 }
 
-.role {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #333;
-  margin-bottom: 10px;
-}
-
 .rolename{
   font-weight: bold;
   color: #357ABD;
-
+  font-size: 1.25rem;
 }
 
 .permissions-checkboxes {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  font-size: 1rem;
 }
 
 .checkbox-label {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #555;
   cursor: pointer;
   transition: color 0.3s ease;
