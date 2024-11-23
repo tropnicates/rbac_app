@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PermissionList from "../components/PermissionsList";
-import RoleTable from "../components/RoleTable"; 
-import Modal from "../components/Modal"; 
+import RoleTable from "../components/RoleTable";
+import Modal from "../components/Modal";
 import "../assets/styles/Permissions.css";
 
 const Permissions = () => {
@@ -60,15 +60,24 @@ const Permissions = () => {
   return (
     <div className="permissions-container">
       <div className="permissions-header">Role and Permission Management</div>
-      <RoleTable
-        roles={roles}
-        onEditRole={handleEditRole}
-        onDeleteRole={handleDeleteRole}
-      />
-      <PermissionList
-        roles={roles}
-        onPermissionChange={handlePermissionChange}
-      />
+      
+      <div className="role-table-container">
+        <div className="role-table-header">
+        <RoleTable
+          roles={roles}
+          onEditRole={handleEditRole}
+          onDeleteRole={handleDeleteRole}
+        />
+      </div>
+      </div>
+
+      <div className="permissions-row">
+        <PermissionList
+          roles={roles}
+          onPermissionChange={handlePermissionChange}
+        />
+      </div>
+
       {modalOpen && (
         <Modal
           isOpen={modalOpen}
