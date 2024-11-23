@@ -101,31 +101,32 @@ const Roles = () => {
           className="input-field"
         />
         <div className="permissions">
-          <label>
-            <input
-              type="checkbox"
-              checked={formData.permissions.includes("Read")}
-              onChange={() => handleCheckboxChange("Read")}
-            />
-            Read
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              checked={formData.permissions.includes("Write")}
-              onChange={() => handleCheckboxChange("Write")}
-            />
-            Write
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              checked={formData.permissions.includes("Delete")}
-              onChange={() => handleCheckboxChange("Delete")}
-            />
-            Delete
-          </label>
-        </div>
+  <div className="permission-item" onClick={() => handleCheckboxChange("Read")}>
+    <input
+      type="checkbox"
+      checked={formData.permissions.includes("Read")}
+      readOnly
+    />
+    <span>Read</span>
+  </div>
+  <div className="permission-item" onClick={() => handleCheckboxChange("Write")}>
+    <input
+      type="checkbox"
+      checked={formData.permissions.includes("Write")}
+      readOnly
+    />
+    <span>Write</span>
+  </div>
+  <div className="permission-item" onClick={() => handleCheckboxChange("Delete")}>
+    <input
+      type="checkbox"
+      checked={formData.permissions.includes("Delete")}
+      readOnly
+    />
+    <span>Delete</span>
+  </div>
+</div>
+
         <button type="submit" className="btn-submit">
           {isEditing ? "Update Role" : "Add Role"}
         </button>

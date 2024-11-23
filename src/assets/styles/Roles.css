@@ -120,7 +120,35 @@
   font-weight: normal;
   padding: 10px;
 }
+.permissions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-around;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-weight: normal;
+  padding: 10px;
+}
 
+.permission-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.permission-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.permission-item span {
+  font-size: 1rem;
+}
 
 @media (max-width: 768px) {
   .role {
