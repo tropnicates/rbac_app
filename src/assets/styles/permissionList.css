@@ -1,0 +1,119 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Main container styling */
+  .permissions-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .permissions {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #357ABD; /* Primary blue color */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Role permissions container */
+  .role-permissions {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd; /* Divider for separation */
+    padding-bottom: 15px;
+  }
+  
+  /* Role title */
+  .role {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333; /* Standard text color */
+    margin-bottom: 10px;
+  }
+  
+  /* Permissions checkboxes container */
+  .permissions-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  /* Checkbox label styling */
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Checkbox styling */
+  .checkbox-label input[type="checkbox"] {
+    accent-color: #357ABD; /* Blue accent color for checkboxes */
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect on labels */
+  .checkbox-label:hover {
+    color: #357ABD; /* Highlight text on hover */
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .permissions-list {
+      padding: 15px;
+    }
+  
+    .permissions {
+      font-size: 1.5rem;
+    }
+  
+    .role {
+      font-size: 1.1rem;
+    }
+  
+    .permissions-checkboxes {
+      gap: 10px;
+    }
+  
+    .checkbox-label {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .permissions-list {
+      padding: 10px;
+    }
+  
+    .permissions {
+      font-size: 1.3rem;
+    }
+  
+    .role {
+      font-size: 1rem;
+    }
+  
+    .permissions-checkboxes {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .checkbox-label {
+      font-size: 0.9rem;
+    }
+  }
+  
