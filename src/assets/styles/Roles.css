@@ -1,10 +1,12 @@
 .role {
+
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
 }
 
 .rolemanagement {
@@ -126,6 +128,7 @@
   padding: 10px;
   border-radius: 4px;
   background-color: #f9f9f9; 
+  font-weight: normal;
 }
 
 
