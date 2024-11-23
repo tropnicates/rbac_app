@@ -102,31 +102,28 @@ const Roles = () => {
         />
         <div className="permissions">
   <div className="permission-item" onClick={() => handleCheckboxChange("Read")}>
-  <div className="text">Read</div>
-
     <input
       type="checkbox"
       checked={formData.permissions.includes("Read")}
       readOnly
     />
+      <div className="text">Read</div>
   </div>
   <div className="permission-item" onClick={() => handleCheckboxChange("Write")}>
-  <div className="text">Write</div>
-
     <input
       type="checkbox"
       checked={formData.permissions.includes("Write")}
       readOnly
     />
+      <div className="text">Write</div>
   </div>
   <div className="permission-item" onClick={() => handleCheckboxChange("Delete")}>
-  <div className="text">Delete</div>
-
     <input
       type="checkbox"
       checked={formData.permissions.includes("Delete")}
       readOnly
     />
+            <div className="text">Delete</div>
   </div>
 </div>
         <button type="submit" className="btn-submit">

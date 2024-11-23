@@ -100,11 +100,11 @@
 }
 
 .action-btn.delete {
-  background-color: #357ABD;
+  background-color: #B00008;
 }
 
 .action-btn.delete:hover {
-  background-color: #B00008;
+  background-color:  #357ABD;
 }
 
 
@@ -117,7 +117,6 @@
   border: 1px solid #ccc; 
   border-radius: 8px;
   background-color: #f9f9f9; 
-  font-weight: normal;
   padding: 10px;
 }
 .permissions {
@@ -159,7 +158,6 @@
     justify-content: center;
     gap: 10px;
     border: 1px solid #ccc; 
-
   }
   
 .btn-submit {
@@ -177,14 +175,6 @@
     justify-content: center;
     box-shadow: none;
   }
-  
-  .text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
   .action-btn.edit,
   .action-btn.delete {
     width: 4rem;
@@ -206,36 +196,35 @@
     gap: 10px;
   }
   .permissions {
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 30px; 
-    padding: 10px;
     font-size: 0.8rem;
     width: 100%; 
+    gap: 10px;
   }
-
-  .permission-item {
-    justify-content: center; 
+  .permission-item{
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
   }
+  
 }
 
 
 @media (max-width: 480px) {
   .permissions {
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; 
-    padding: 10px;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     width: 100%; 
-  }
-
-  .permission-item {
-    justify-content: center; 
     align-items: center;
+  }
+  .permission-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
   }
   
 }
