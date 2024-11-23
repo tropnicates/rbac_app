@@ -3,6 +3,18 @@ body {
   background-color: #f9f9f9;
   color: #333;
   width: 100%;
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+.user {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1200px; 
+  padding-left: 20px; 
+  padding-right: 20px;
+  box-sizing: border-box; 
 }
 
 .user {
@@ -12,7 +24,6 @@ body {
 
 .usermanagement {
   font-size: 1.8rem;
-  font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
   color: #357ABD;
@@ -52,16 +63,17 @@ body {
 .btn-submit:hover {
   background-color: #357ABD;
 }
-
 .validation-error {
-  color: #D8000C;
-  background-color: #FFBABA;
-  padding: 10px;
-  font-size: 0.9rem;
+  color: #D8000C; 
+  background-color: #FFBABA; 
+  padding: 10px; 
+  font-size: 0.9rem; 
+  display: flex;
+  text-align: center; 
+  border-radius: 4px; 
+  max-width: 100%; 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .user-table {
@@ -111,78 +123,55 @@ body {
 .action-btn.delete:hover {
   background-color: #B00008;
 }
+.sortsearch {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: space-between; 
+  width: 100%; 
+  gap: 20px; 
+  margin-top: 3rem;
+}
 
-.category-filter select {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: white;
-  color: #333;
-  cursor: pointer;
+.search-bar {
+  flex: 1; 
 }
 
 .sorting {
-  max-width: 1200px;
-  margin: 20px auto;
-  margin-top: -60px;
+  flex: 1; 
   display: flex;
-  justify-content: flex-start;
-  padding: 0 20px;
+  justify-content: flex-end; 
 }
-
-.sorting select {
+.search-bar {
+  margin-bottom: 20px;
   padding: 10px;
-  font-size: 16px;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: white;
-  color: #333;
+}
+
+.sort-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color:#357ABD;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-
-.search-bar {
-  max-width: 75rem;
-  margin: 1.25rem auto;
-  padding: 0 1.25rem;
-}
-
-.search-bar input {
-  width: 100%;
-  padding: 1.25rem 0;
-  font-size: 1rem;
-  border: 0.0625rem solid #ccc;
-  border-radius: 0.3125rem;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.search-bar input:focus {
-  border-color: #007bff;
+.sort-btn:hover {
+  background-color: #357ABD;
 }
 
 @media (max-width: 768px) {
   .user {
-    padding: 10px;
+    padding: 15px; 
   }
-  .user-table{
-    margin-left: 1rem;
-  }
-  
+
   .category-filter {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.625rem;
-  }
-
-  .search-bar input {
-    font-size: 0.875rem;
-  }
-
-  .sorting {
-    flex-direction: column;
-    align-items: flex-end;
     gap: 0.625rem;
   }
 
@@ -192,57 +181,46 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-left: 2rem;
-    margin-right: 2rem;
     margin-bottom: 20px;
   }
 
-  .btn-submit {
-    align-self: center;
+  .search-bar,
+  .sorting {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .search-bar input {
+    width: 100%;
   }
 
   .user-table th,
   .user-table td {
     font-size: 0.9rem;
   }
+  .validation-error {
+    font-size: 0.8rem;
+    padding: 8px; 
+    margin-top: 8px; 
+  }
 }
 
 @media (max-width: 480px) {
-  .user{
-    margin-top: 3rem;
+  .user {
+    /* padding: 10px;  */
+    margin-left: 10px;
   }
-  .category-filter {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.625rem;
-    order: 2; 
-  }
-
-  .categories {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.625rem;
-    order: 1; 
-  }
-
-  .search-bar input {
-    font-size: 0.875rem;
-    padding: 1rem 0;
-  }
-
-  .sorting {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.625rem;
-    margin-top: 1rem;
-  }
-  
   .usermanagement {
     font-size: 1.5rem;
   }
-  .user-table{
-    margin-left: 1rem;
+
+  .search-bar input,
+  .sorting select {
+    font-size: 0.875rem;
+  }
+
+  .search-bar input {
+    width: 100%;
   }
 
   .user-table th,
@@ -250,7 +228,14 @@ body {
     font-size: 0.8rem;
     padding: 8px;
   }
-  .action-btn.edit, .action-btn.delete{
+
+  .action-btn.edit,
+  .action-btn.delete {
     width: 60px;
+  }
+  .validation-error {
+    font-size: 0.75rem; 
+    padding: 6px; 
+    margin-top: 6px; 
   }
 }
