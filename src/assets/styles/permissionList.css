@@ -1,119 +1,111 @@
-/* General styling */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  /* Main container styling */
+.permissions-list {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-list {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #4A90E2;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.role-permissions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.role-permissions:hover {
+  background-color: #f9fafc;
+}
+
+.role {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.permissions-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.checkbox-label:hover {
+  color: #357ABD;
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: #4A90E2;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
   .permissions-list {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff; /* White background for contrast */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
   }
-  
-  /* Header */
-  .permissions {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #357ABD; /* Primary blue color */
-    margin-bottom: 20px;
-    text-align: center;
+
+  .container-list {
+    font-size: 1.4rem;
   }
-  
-  /* Role permissions container */
+
   .role-permissions {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ddd; /* Divider for separation */
-    padding-bottom: 15px;
+    gap: 10px;
+    padding: 12px;
   }
-  
-  /* Role title */
+
   .role {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333; /* Standard text color */
-    margin-bottom: 10px;
+    font-size: 1.1rem;
   }
-  
-  /* Permissions checkboxes container */
-  .permissions-checkboxes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  /* Checkbox label styling */
+
   .checkbox-label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .permissions-list {
+    padding: 10px;
+  }
+
+  .container-list {
+    font-size: 1.2rem;
+  }
+
+  .role-permissions {
+    padding: 10px;
+  }
+
+  .role {
     font-size: 1rem;
-    color: #333;
   }
-  
-  /* Checkbox styling */
-  .checkbox-label input[type="checkbox"] {
-    accent-color: #357ABD; /* Blue accent color for checkboxes */
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+
+  .checkbox-label {
+    font-size: 0.9rem;
   }
-  
-  /* Hover effect on labels */
-  .checkbox-label:hover {
-    color: #357ABD; /* Highlight text on hover */
-  }
-  
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    .permissions-list {
-      padding: 15px;
-    }
-  
-    .permissions {
-      font-size: 1.5rem;
-    }
-  
-    .role {
-      font-size: 1.1rem;
-    }
-  
-    .permissions-checkboxes {
-      gap: 10px;
-    }
-  
-    .checkbox-label {
-      font-size: 0.95rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .permissions-list {
-      padding: 10px;
-    }
-  
-    .permissions {
-      font-size: 1.3rem;
-    }
-  
-    .role {
-      font-size: 1rem;
-    }
-  
-    .permissions-checkboxes {
-      flex-direction: column;
-      gap: 8px;
-    }
-  
-    .checkbox-label {
-      font-size: 0.9rem;
-    }
-  }
-  
+}

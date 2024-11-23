@@ -131,7 +131,7 @@
 
 @media (max-width: 768px) {
   .role {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,23 +139,16 @@
   }
   
 .btn-submit {
-  padding: 10px 8px;
+  padding: 10px 10px;
   font-size: 1rem;
 }
 
   .role-form {
-    gap: 30px;
+    gap: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-  }
-  .permissions{
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
   }
 
   .action-btn.edit,
@@ -173,12 +166,16 @@
 
   .btn-submit {
     align-self: center;
-    padding: 12px;
   }
 
   .role-table th,
   .role-table td {
     font-size: 0.9rem;
+  }
+  .permissions {
+    flex-direction: column; 
+    gap: 5px; 
+    padding: 10px;
   }
 }
 

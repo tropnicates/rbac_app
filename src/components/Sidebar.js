@@ -28,16 +28,15 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/permissions" className="sidebar-link" onClick={toggleSidebar}>
-              Permissions
-            </Link>
-          </li>
-          <li>
             <Link to="/roles" className="sidebar-link" onClick={toggleSidebar}>
               Roles
             </Link>
           </li>
-          
+          <li>
+            <Link to="/permissions" className="sidebar-link" onClick={toggleSidebar}>
+              Permissions
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

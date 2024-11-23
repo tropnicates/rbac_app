@@ -1,64 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react"; 
+import "../assets/styles/modal.css"
 
 const Modal = ({ isOpen, onClose, onSubmit, data, type }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    permissions: ["Read"]
-  });
-
-  useEffect(() => {
-    if (data) {
-      setFormData({ name: data.name, permissions: data.permissions });
-    }
-  }, [data]);
+  const [roleData, setRoleData] = useState(data || { name: "" });
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setRoleData({ ...roleData, name: e.target.value });
   };
 
-  const handleCheckboxChange = (permission) => {
-    setFormData((prevData) => {
-      const updatedPermissions = prevData.permissions.includes(permission)
-        ? prevData.permissions.filter((p) => p !== permission)
-        : [...prevData.permissions, permission];
-      return { ...prevData, permissions: updatedPermissions };
-    });
-  };
-
-  const handleSubmit = () => {
-    onSubmit(formData);
-    onClose();
-  };
-
-  return isOpen ? (
-    <div className="modal-overlay">
-      <div className="modal-content">
-        <h2>{data ? `Edit ${type}` : `Add ${type}`}</h2>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleInputChange}
-          placeholder="Role Name"
-        />
-        <div className="permissions-checkboxes">
-          {["Read", "Write", "Delete"].map((permission) => (
-            <label key={permission} className="checkbox-label">
-              <input
-                type="checkbox"
-                checked={formData.permissions.includes(permission)}
-                onChange={() => handleCheckboxChange(permission)}
-              />
-              {permission}
-            </label>
-          ))}
-        </div>
-        <button onClick={handleSubmit}>Save</button>
-        <button onClick={onClose}>Close</button>
+  return (
+    <div className={`modal-overlay ${isOpen ? "open" : ""}`}>
+      <div className="modal-container">
+        <div className="modal-header">Update {type} </div>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            onSubmit(roleData);
+          }}
+        >
+          <input
+            type="text"
+            placeholder="Role Name"
+            value={roleData.name || ""}
+            onChange={handleInputChange}
+          />
+          <div className="modal-buttons">
+            <button type="submit">Save</button>
+            <button type="button" onClick={onClose}>
+              Cancel
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-  ) : null;
+  );
 };
 
 export default Modal;

@@ -1,15 +1,15 @@
 import React from "react";
-import "../assets/styles/permissionList.css"
+import "../assets/styles/permissionList.css";
 
 const PermissionList = ({ roles, onPermissionChange }) => {
   const allPermissions = ["Read", "Write", "Delete"];
 
   return (
     <div className="permissions-list">
-      <div className="permissions">Permissions</div>
+      <h3>Permissions</h3>
       {roles.map((role) => (
         <div key={role.id} className="role-permissions">
-          <div className="role">{role.name}</div>
+          <h4>{role.name}</h4>
           <div className="permissions-checkboxes">
             {allPermissions.map((permission) => (
               <label key={permission} className="checkbox-label">
