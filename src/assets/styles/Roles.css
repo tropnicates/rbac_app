@@ -193,9 +193,9 @@
     justify-content: space-around;
     padding: 10px;
   }
-  .role-form{
+  /* .role-form{
     gap: 10px;
-  }
+  } */
 
   .btn-submit {
     padding: 5px 15px;
