@@ -107,7 +107,7 @@ const Roles = () => {
       checked={formData.permissions.includes("Read")}
       readOnly
     />
-    <span>Read</span>
+    <div className="text">Read</div>
   </div>
   <div className="permission-item" onClick={() => handleCheckboxChange("Write")}>
     <input
@@ -115,7 +115,7 @@ const Roles = () => {
       checked={formData.permissions.includes("Write")}
       readOnly
     />
-    <span>Write</span>
+    <div className="text">Write</div>
   </div>
   <div className="permission-item" onClick={() => handleCheckboxChange("Delete")}>
     <input
@@ -123,10 +123,9 @@ const Roles = () => {
       checked={formData.permissions.includes("Delete")}
       readOnly
     />
-    <span>Delete</span>
+    <div className="text">Delete</div>
   </div>
 </div>
-
         <button type="submit" className="btn-submit">
           {isEditing ? "Update Role" : "Add Role"}
         </button>

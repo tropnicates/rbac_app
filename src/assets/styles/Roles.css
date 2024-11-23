@@ -177,6 +177,13 @@
     justify-content: center;
     box-shadow: none;
   }
+  
+  .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   .action-btn.edit,
   .action-btn.delete {
