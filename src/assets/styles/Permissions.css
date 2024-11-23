@@ -1,17 +1,20 @@
 .permissions-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 20px auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .permissions-header {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #4a90e2;
+  color: #4A90E2;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -22,7 +25,7 @@
 }
 
 .role-table-header {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
@@ -34,16 +37,14 @@
   margin-top: 20px;
 }
 
-.role-table th,
-.role-table td {
+.role-table th, .role-table td {
   padding: 10px;
   text-align: left;
-  font-size: 1rem;
   border-bottom: 1px solid #ddd;
 }
 
 .role-table th {
-  background-color: #4a90e2;
+  background-color: #4A90E2;
   color: #fff;
 }
 
@@ -52,6 +53,7 @@
 }
 
 button {
+  background-color: #4A90E2;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -61,41 +63,28 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button.edit-btn {
-  background-color: #FFD700; 
+button:hover {
+  background-color: #357ABD;
 }
-
-button.edit-btn:hover {
-  background-color: #FFD700; 
-}
-
-button.delete-btn {
-  background-color: #D8000C; 
-}
-
-button.delete-btn:hover {
-  background-color: #D8000C; 
-}
-
 .permissions-checkboxes {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* justify-content: flex-start; */
-  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px; /* Adds spacing between checkboxes */
   padding: 10px;
 }
 
 .checkbox-label {
-  /* display: flex; */
-  /* align-items: center; */
-  gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Spacing between checkbox and label */
   font-size: 0.95rem;
   color: #555;
   cursor: pointer;
 }
 
 .checkbox-label input[type="checkbox"] {
-  accent-color: #4a90e2;
+  accent-color: #4A90E2; /* Changes checkbox highlight color */
   cursor: pointer;
 }
 
@@ -105,7 +94,6 @@ button.delete-btn:hover {
   align-items: center;
   padding: 10px;
   border: 1px solid #ddd;
-  color: #357ABD;
   border-radius: 5px;
   margin-bottom: 10px;
   transition: background-color 0.3s ease;
@@ -115,17 +103,10 @@ button.delete-btn:hover {
   background-color: #f9fafc;
 }
 
-.permissions-checkboxes .checkbox-label {
-  color: #357ABD; 
-  font-weight: 500;
-}
-
-.permissions-checkboxes .checkbox-label:hover {
-  color: #357ABD; 
-}
-
 .permission-actions button {
   margin-left: auto;
+  background-color: #357ABD;
+  color: #fff;
   border: none;
   padding: 8px 12px;
   border-radius: 4px;
@@ -133,7 +114,24 @@ button.delete-btn:hover {
   transition: all 0.3s ease;
 }
 
-/* Responsive styles */
+.permission-actions button:hover {
+  background-color: #357ABD;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #357ABD; 
+  cursor: pointer;
+}
+
+.checkbox-label:hover {
+  color: #357ABD;
+}
+
+
+
 @media (max-width: 768px) {
   .permissions-container {
     padding: 15px;
@@ -145,8 +143,7 @@ button.delete-btn:hover {
     margin-bottom: 20px;
   }
 
-  .role-table th,
-  .role-table td {
+  .role-table th, .role-table td {
     font-size: 0.9rem;
     padding: 8px;
   }
@@ -190,8 +187,7 @@ button.delete-btn:hover {
     font-size: 0.75rem;
   }
 
-  .role-table th,
-  .role-table td {
+  .role-table th, .role-table td {
     font-size: 0.8rem;
     padding: 8px;
   }
