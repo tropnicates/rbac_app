@@ -15,6 +15,11 @@ const Permissions = () => {
       id: 2,
       name: "User",
       permissions: ["Read"]
+    },
+    {
+      id: 2,
+      name: "Faculty",
+      permissions: ["Read", "Write", "Delete"]
     }
   ]);
   const [modalOpen, setModalOpen] = useState(false);
