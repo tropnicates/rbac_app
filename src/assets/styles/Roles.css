@@ -199,11 +199,14 @@
     gap: 10px;
   }
   .permissions {
-    flex-direction: row; 
-    gap: 25px; 
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Adjust gap for smaller screens */
     padding: 10px;
-    width: 100%;
-    font-size: 1rem;
+    font-size: 0.8rem; /* Smaller font size */
+  }
+
+  .permission-item {
+    justify-content: center; /* Center items on smaller screens */
   }
 }
 
@@ -227,12 +230,14 @@
   }
   
   .permissions {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-around;
-    padding: 5px;
+    gap: 8px; /* Further reduce gap */
+    padding: 8px;
+    font-size: 0.75rem; /* Even smaller font size for very small screens */
+  }
+
+  .permission-item {
+    flex-direction: row; /* Ensure items stay inline */
+    justify-content: space-between; /* Space items evenly */
   }
   .role-form{
     gap: 15px;
