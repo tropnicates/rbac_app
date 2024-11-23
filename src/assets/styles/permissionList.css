@@ -13,12 +13,13 @@
 
 .title{
   color: #357ABD;
-  font-size: 1.5rem;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 1.4rem;
+
 }
 
 .container-list {
@@ -87,7 +88,7 @@
   }
 
   .container-list {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   .role-permissions {
