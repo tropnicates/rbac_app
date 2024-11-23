@@ -122,22 +122,24 @@
 
 @media (max-width: 768px) {
   .role {
-    padding: 15px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
   }
   
 .btn-submit {
-  /* padding: 10px 10px; */
+  padding: 10px 10px;
   font-size: 1rem;
 }
 
   .role-form {
+    width: 300px;
     gap: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -153,16 +155,20 @@
 
   .input-field {
     width: 100%;
+    gap: 10px;
+
   }
 
   .role-table th,
   .role-table td {
     font-size: 0.9rem;
+    gap: 10px;
   }
   .permissions {
     flex-direction: row; 
-    gap: 5px; 
+    gap: 25px; 
     padding: 10px;
+    width: 300px;
   }
 }
 
@@ -189,17 +195,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     justify-content: space-around;
-    padding: 10px;
+    padding: 5px;
   }
-  /* .role-form{
-    gap: 10px;
-  } */
+  .role-form{
+    gap: 15px;
+  }
 
-  .btn-submit {
-    padding: 5px 15px;
+  /* .btn-submit {
+    padding: 5px 5px;
     font-size: 1rem;
-  }
+  } */
 
 }
