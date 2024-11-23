@@ -59,7 +59,7 @@ button {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 8px;
   margin: 5px;
   transition: background-color 0.3s ease;
 }
@@ -95,7 +95,7 @@ button:hover {
   align-items: center;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-bottom: 10px;
   transition: background-color 0.3s ease;
 }
@@ -110,7 +110,7 @@ button:hover {
   color: #fff;
   border: none;
   padding: 8px 12px;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
