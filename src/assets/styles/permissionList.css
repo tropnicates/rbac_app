@@ -65,6 +65,7 @@
   cursor: pointer;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .permissions-list {
     padding: 15px;
