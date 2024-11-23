@@ -220,3 +220,21 @@
     align-items: center;
   }
 }
+
+
+@media (max-width: 480px) {
+  .permissions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; 
+    padding: 10px;
+    font-size: 0.8rem;
+    width: 100%; 
+  }
+
+  .permission-item {
+    justify-content: center; 
+    align-items: center;
+  }
+}
