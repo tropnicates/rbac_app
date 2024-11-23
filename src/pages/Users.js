@@ -114,13 +114,6 @@ const Users = () => {
       {validationError && <div className="validation-error">{validationError}</div>}
 
       <div className="search-sort">
-        <input
-          type="text"
-          placeholder="Search users..."
-          value={searchQuery}
-          onChange={handleSearch}
-          className="input-field search-bar"
-        />
         <button
           onClick={() => handleSort("name")}
           className="sort-btn"
@@ -133,6 +126,13 @@ const Users = () => {
         >
           Sort by Email {sortField === "email" && (sortOrder === "asc" ? "↑" : "↓")}
         </button>
+        <input
+          type="text"
+          placeholder="Search users..."
+          value={searchQuery}
+          onChange={handleSearch}
+          className="input-field search-bar"
+        />
       </div>
 
       <table className="user-table">

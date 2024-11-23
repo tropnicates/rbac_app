@@ -69,7 +69,7 @@ body {
   
   @media (max-width: 768px) {
     .dashboard-container{
-      font-size: 20px;
+    font-size: 20px;
     margin-top: 3rem;
     width: 100%;
     }
