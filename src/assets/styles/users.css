@@ -65,15 +65,12 @@ body {
 }
 .validation-error {
   color: #D8000C; 
-  background-color: #FFBABA; 
-  padding: 10px; 
-  font-size: 0.9rem; 
-  display: flex;
-  text-align: center; 
-  border-radius: 4px; 
-  max-width: 100%; 
+  font-size: 1.2rem; 
   display: flex;
   flex-direction: column;
+  text-align: center; 
+  margin-bottom: 20px;
+  padding: 0;
 }
 
 .user-table {
@@ -129,7 +126,7 @@ body {
   align-items: center;
   justify-content: space-between; 
   width: 100%; 
-  gap: 20px; 
+  gap: 50px; 
   margin-top: 3rem;
 }
 
@@ -150,10 +147,10 @@ body {
   border-radius: 5px;
 }
 
-.sort-btn {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color:#357ABD;
+.search-sort {
+  /* margin-left: 5px; */
+  /* padding: 5px 10px; */
+  /* background-color:#357ABD; */
   color: white;
   border: none;
   border-radius: 5px;
@@ -187,7 +184,7 @@ body {
   .search-bar,
   .sorting {
     flex-direction: row;
-    gap: 20px;
+    gap: 70px;
   }
 
   .search-bar input {
