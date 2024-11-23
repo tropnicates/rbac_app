@@ -12,9 +12,9 @@
 }
 
 .permissions-header {
-  font-size: 1.8rem;
   font-weight: bold;
-  color: #4A90E2;
+  font-size: 1.8rem;
+  color: #357ABD;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -25,8 +25,9 @@
 }
 
 .role-table-header {
-  font-size: 1.4rem;
   font-weight: bold;
+  color: #357ABD;
+  font-size: 1.4rem;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -44,7 +45,7 @@
 }
 
 .role-table th {
-  background-color: #4A90E2;
+  background-color: #357ABD;
   color: #fff;
 }
 
@@ -53,7 +54,7 @@
 }
 
 button {
-  background-color: #4A90E2;
+  background-color: #357ABD;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -70,21 +71,21 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 15px; /* Adds spacing between checkboxes */
+  gap: 15px; 
   padding: 10px;
 }
 
 .checkbox-label {
   display: flex;
   align-items: center;
-  gap: 8px; /* Spacing between checkbox and label */
+  gap: 8px; 
   font-size: 0.95rem;
   color: #555;
   cursor: pointer;
 }
 
 .checkbox-label input[type="checkbox"] {
-  accent-color: #4A90E2; /* Changes checkbox highlight color */
+  accent-color: #357ABD; 
   cursor: pointer;
 }
 

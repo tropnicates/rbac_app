@@ -59,7 +59,7 @@
 }
 
 .modal-container input:focus {
-  border-color: #007bff;
+  border-color: #357ABD;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
@@ -81,12 +81,12 @@
 }
 
 .modal-buttons button[type="submit"] {
-  background-color: #007bff;
+  background-color: #357ABD;
   color: #ffffff;
 }
 
 .modal-buttons button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #357ABD;
 }
 
 .modal-buttons button[type="button"] {

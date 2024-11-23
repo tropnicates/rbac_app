@@ -6,10 +6,10 @@ const PermissionList = ({ roles, onPermissionChange }) => {
 
   return (
     <div className="permissions-list">
-      <h3>Permissions</h3>
+      <div className="title">Permissions</div>
       {roles.map((role) => (
         <div key={role.id} className="role-permissions">
-          <h4>{role.name}</h4>
+          <div className="rolename">{role.name}</div>
           <div className="permissions-checkboxes">
             {allPermissions.map((permission) => (
               <label key={permission} className="checkbox-label">
