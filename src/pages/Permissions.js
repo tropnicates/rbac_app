@@ -17,7 +17,7 @@ const Permissions = () => {
       permissions: ["Read"]
     },
     {
-      id: 2,
+      id: 3,
       name: "Faculty",
       permissions: ["Read", "Write", "Delete"]
     }
