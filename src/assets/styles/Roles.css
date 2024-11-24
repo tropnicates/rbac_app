@@ -46,7 +46,7 @@
 .btn-submit {
   padding: 12px 20px;
   font-size: 1rem;
-  background-color: #357ABD;
+  background-color: #3190ef;
   color: white;
   border: none;
   border-radius: 8px;
@@ -82,13 +82,13 @@
 }
 
 .action-btn {
-  padding: 5px 10px;
   font-size: 0.9rem;
   color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .action-btn.edit {
