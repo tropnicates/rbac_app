@@ -142,13 +142,13 @@
     margin: 0 0px;
     padding: 10px;  
     border: 1px solid #ccc;
+    margin-top: 3rem;
     border-radius: 8px;
   }
   .usermanagement {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 15px;
-
   }
   .user-form {
     width: 90%;
@@ -166,9 +166,9 @@
     width: 100%;
     padding: 12px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-
   }
   .sort-btn {
     font-size: 0.7rem;
@@ -202,11 +202,10 @@
 @media (max-width: 480px) {
   .user {
     padding: 5px;
-        margin-top: 3rem;
-
   }
   .usermanagement {
     font-size: 1.5rem;
+    margin-top: 3rem;
   }
   .user-form {
     flex-direction: column;
