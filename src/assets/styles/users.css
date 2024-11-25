@@ -37,9 +37,7 @@
   align-items: center;
   justify-content: center;
   height: 40px;
-
 }
-
 .btn-submit:hover {
   background-color: #357ABD;
 }
@@ -50,28 +48,23 @@
   flex-direction: column;
   text-align: center; 
 }
-
 .user-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
-
 .user-table th,
 .user-table td {
   text-align: left;
   padding: 10px;
 }
-
 .user-table th {
   background-color: #357ABD;
   color: #fff;
 }
-
 .user-table tr:hover {
   background-color: #f1f1f1;
 }
-
 .action-btn {
   padding: 5px 10px;
   font-size: 1rem;
@@ -90,7 +83,6 @@
   gap: 30px; 
   margin-top: 1rem;
 }
-
 .search-bar {
   flex: 1; 
 }
@@ -99,7 +91,6 @@
   font-size: 1rem;
   padding: 10px;
 }
-
 .sorting {
   flex: 1; 
   display: flex;
@@ -138,17 +129,19 @@
     justify-content: center;
   }
   .search-sort{
-    gap: 10px;
-    height:2.5rem;
+    gap: 20px;
+    height:2rem;
   }
   .sort-btn {
-    font-size: 0.45rem;
-    height:2.5rem;
+    font-size: 0.5rem;
+    height:2rem;
+    width: 80px;
     border-radius: 4px;
   }
   .search-bar {
     border: 1px solid #ccc;
     border-radius: 4px;
+    height:2rem;
   }
   .user-table {
     width: 100%;
