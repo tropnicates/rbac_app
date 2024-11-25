@@ -6,7 +6,15 @@ import "../assets/styles/users.css";
 const Users = () => {
   const [users, setUsers] = useState([
     { id: 1, name: "Ravish Kumar", email: "ravish@example.com", role: "Admin", status: "Active" },
-    { id: 2, name: "Mohit Mahto", email: "mohit@example.com", role: "User", status: "Inactive" },
+    { id: 2, name: "Abhishek Ranjan", email: "mohit@example.com", role: "User", status: "Inactive" },
+    { id: 3, name: "Priya Verma", email: "priya@example.com", role: "User", status: "Inactive" },
+    { id: 4, name: "Prity Yadav", email: "prity@example.com", role: "User", status: "Inactive" },
+    { id: 5, name: "Prabhat Raj", email: "prabhat@example.com", role: "User", status: "Inactive" },
+    { id: 6, name: "Dhruv Gupta", email: "dhruv@example.com", role: "User", status: "Inactive" },
+    { id: 7, name: "Jatin Sahu", email: "jatin@example.com", role: "User", status: "Inactive" },
+    { id: 8, name: "Mithoon Raj", email: "mihtoon@example.com", role: "User", status: "Inactive" },
+    { id: 9, name: "Sweety Rani", email: "sweety@example.com", role: "User", status: "Inactive" },
+    { id: 10, name: "Aditya Raj", email: "aditya@example.com", role: "User", status: "Inactive" },
   ]);
 
   const [formData, setFormData] = useState({ name: "", email: "", role: "User", status: "Active" });

@@ -14,15 +14,50 @@ const Permissions = () => {
       permissions: ["Read", "Write", "Delete"]
     },
     {
-      id: 3,
+      id: 2,
       name: "Faculty",
       permissions: ["Read", "Write"]
     },
     {
-      id: 2,
+      id: 3,
       name: "User",
       permissions: ["Read"]
-    }
+    },
+    {
+      id: 4,
+      name: "Sweeper",
+      permissions: ["Read"]
+    },
+    {
+      id: 5,
+      name: "Dean",
+      permissions: ["Read", "Write", "Delete"]
+    },
+    {
+      id: 6,
+      name: "Interpreter",
+      permissions: ["Read"]
+    },
+    {
+      id: 7,
+      name: "Speaker",
+      permissions: ["Read"]
+    },
+    {
+      id: 8,
+      name: "Guest",
+      permissions: ["Read"]
+    },
+    {
+      id: 9,
+      name: "Contractor",
+      permissions: ["Read","Write"]
+    },
+    {
+      id: 10,
+      name: "Tester",
+      permissions: ["Read","Write"]
+    },
   
   ]);
   const [modalOpen, setModalOpen] = useState(false);

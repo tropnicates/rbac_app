@@ -3,7 +3,7 @@ import "../assets/styles/permissionList.css";
 
 const PermissionList = ({ roles, onPermissionChange }) => {
   const allPermissions = ["Read", "Write", "Delete"];
-
+  
   return (
     <div className="permissions-list">
       <div className="title">Permissions</div>

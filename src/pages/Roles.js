@@ -15,6 +15,66 @@ const Roles = () => {
       description: "Limited access",
       permissions: ["Read"],
     },
+    {
+      id: 3,
+      name: "Admin",
+      description: "Limited access",
+      permissions: ["Read", "Write", "Delete"]
+    },
+    {
+      id: 4,
+      name: "Faculty",
+      description: "Limited access",
+      permissions: ["Read", "Write"]
+    },
+    {
+      id: 3,
+      name: "User",
+      description: "Limited access",
+      permissions: ["Read"]
+    },
+    {
+      id: 4,
+      name: "Sweeper",
+      description: "Limited access",
+      permissions: ["Read"]
+    },
+    {
+      id: 5,
+      name: "Dean",
+      description: "Limited access",
+      permissions: ["Read", "Write", "Delete"]
+    },
+    {
+      id: 6,
+      name: "Interpreter",
+      description: "Limited access",
+      permissions: ["Read"]
+    },
+    {
+      id: 7,
+      name: "Speaker",
+      description: "Limited access",
+      permissions: ["Read"]
+    },
+    {
+      id: 8,
+      name: "Guest",
+      description: "Limited access",
+      permissions: ["Read"]
+    },
+    {
+      id: 9,
+      name: "Contractor",
+      description: "Limited access",
+      permissions: ["Read","Write"]
+    },
+    {
+      id: 10,
+      name: "Tester",
+      description: "Limited access",
+      permissions: ["Read","Write"]
+    },
   ]);
 
   const [formData, setFormData] = useState({
@@ -136,7 +196,7 @@ const Roles = () => {
       <table className="role-table">
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Role Name</th>
             <th>Description</th>
             <th>Permissions</th>
             <th>Actions</th>
