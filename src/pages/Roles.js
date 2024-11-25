@@ -26,55 +26,7 @@ const Roles = () => {
       name: "Faculty",
       description: "Limited access",
       permissions: ["Read", "Write"]
-    },
-    {
-      id: 3,
-      name: "User",
-      description: "Limited access",
-      permissions: ["Read"]
-    },
-    {
-      id: 4,
-      name: "Sweeper",
-      description: "Limited access",
-      permissions: ["Read"]
-    },
-    {
-      id: 5,
-      name: "Dean",
-      description: "Limited access",
-      permissions: ["Read", "Write", "Delete"]
-    },
-    {
-      id: 6,
-      name: "Interpreter",
-      description: "Limited access",
-      permissions: ["Read"]
-    },
-    {
-      id: 7,
-      name: "Speaker",
-      description: "Limited access",
-      permissions: ["Read"]
-    },
-    {
-      id: 8,
-      name: "Guest",
-      description: "Limited access",
-      permissions: ["Read"]
-    },
-    {
-      id: 9,
-      name: "Contractor",
-      description: "Limited access",
-      permissions: ["Read","Write"]
-    },
-    {
-      id: 10,
-      name: "Tester",
-      description: "Limited access",
-      permissions: ["Read","Write"]
-    },
+    }
   ]);
 
   const [formData, setFormData] = useState({
