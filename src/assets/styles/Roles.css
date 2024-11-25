@@ -59,7 +59,7 @@
   font-size: 1rem;
 }
 .action-btn {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -143,33 +143,48 @@
 
 @media (max-width: 768px) {
   .role {
-    margin-top: 2rem;
-    width: 100%;
-    font-size: 20px;
+    margin-top: 1rem;
   }
   .rolemanagement{
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1rem;
   }
-.role-form {
-    display: flex;
+  .role-form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-
+  .role-form .input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5rem;
+  }
   .permissions {
-    width: 100%;
+    width: 150px;
+  }
+  .permission-item span {
+    font-size: 0.5rem;
+  }
+  .permission-item {
+    font-size: 0.5rem;
   }
   .permission-item input[type="checkbox"] {
-    width: 28px;
+    width: 0.5rem;
+    height: 0.5rem;
   }
   .action-btn.edit,
   .action-btn.delete {
-    font-size: 0.75rem;
-    width: 4rem;
+    font-size: 0.5rem;
+    width: 2rem;
+    padding: 0.25rem;
   }
   .action-btn.edit {
     margin-bottom: 5px;
+  }
+  .btn-submit {
+    font-size: 0.5rem;
+    height: 20px;
+    background-color: #357ABD;
   }
 }

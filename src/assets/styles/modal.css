@@ -105,16 +105,16 @@
     width: 100%;
   }
   .modal-header {
-    font-size: 1rem;
+    font-size: 0.5rem;
     padding: 12px;
   }
   .modal-container input {
-    font-size: 1rem;
+    font-size: 0.5rem;
     padding: 10px;
   }
 
   .modal-buttons button {
-    font-size: 1rem;
+    font-size: 0.5rem;
     padding: 10px;
   }
 }

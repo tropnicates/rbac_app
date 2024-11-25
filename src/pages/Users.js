@@ -14,7 +14,7 @@ const Users = () => {
     { id: 7, name: "Jatin Sahu", email: "jatin@example.com", role: "User", status: "Inactive" },
     { id: 8, name: "Mithoon Raj", email: "mihtoon@example.com", role: "User", status: "Inactive" },
     { id: 9, name: "Sweety Rani", email: "sweety@example.com", role: "User", status: "Inactive" },
-    { id: 10, name: "Aditya Raj", email: "aditya@example.com", role: "User", status: "Inactive" },
+    { id: 10, name: "Aditya Raj", email: "mohit@example.com", role: "User", status: "Inactive" },
   ]);
 
   const [formData, setFormData] = useState({ name: "", email: "", role: "User", status: "Active" });
@@ -139,7 +139,7 @@ const Users = () => {
           placeholder="Search users..."
           value={searchQuery}
           onChange={handleSearch}
-          className="input-field search-bar"
+          className="input-fieldsearch-bar"
         />
       </div>
 

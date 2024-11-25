@@ -42,7 +42,7 @@
     color: #333;
   }
   .card-description {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #777;
   }
   .icon {
@@ -53,14 +53,33 @@
   
   @media (max-width: 768px) {
     .dashboard-container{
-    margin-top: 2rem;
-    width: 100%;
+      margin-top: 1rem;
+      width: 100%;
     }
     .dashboard-card {
-      width: 90%;
+      width: 100%;
     }
     .dashboard-title-text {
-      font-size: 2rem;
+      font-size: 1rem;
+    }
+    .dashboard-subtitle {
+      font-size: 0.5rem;
+    }
+    .card-title {
+      font-size: 0.75rem;
+    }
+    .card-description {
+      font-size: 0.5rem;
+    }
+    .icon {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #4caf50;
+    }
+    .dashboard-card {
+      background-color: #fff;
+      width: 150px;
+      padding: 10px;
     }
   }
   

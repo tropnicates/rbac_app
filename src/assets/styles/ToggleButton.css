@@ -7,11 +7,10 @@ body {
 .toggle-button {
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 1px;
     background-color: #f9f9f9;
     color: black;
     border: none;
-    padding: 10px;
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 1001;

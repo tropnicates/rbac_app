@@ -5,7 +5,6 @@ body, html {
   width: 100%;
   overflow-x: hidden; 
 }
-
 .user {
   width: 100%;
   margin: 0 auto; 
@@ -91,7 +90,7 @@ body, html {
   align-items: center;
   justify-content: space-between; 
   width: 100%; 
-  gap: 30px; 
+  gap: 20px; 
   margin-top: 1rem;
 }
 .search-bar {
@@ -109,20 +108,20 @@ body, html {
   display: flex;
   justify-content: flex-end; 
 }
-.search-bar {
+.search-sort .input-fieldsearch-bar {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  width: 350px;
 }
 
 @media (max-width: 768px) {
   .user {
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 100%;
-    font-size: 20px;
   }
   .usermanagement {
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
   }
   .user-form {
@@ -131,34 +130,43 @@ body, html {
     align-items: center;
     justify-content: center;
   }
-  .input-field {
-    width: 100%;
+  .user-form .input-field {
+    font-size: 0.5rem;
   }
-  .btn-submit {
-    width: 40%;
+  .user-form .btn-submit {
+    font-size: 0.5rem;
+    border: none;
+    height: 1rem;
+  }
+  .search-sort{
+    height: 1rem;
+    padding: 0;
+    gap: 5px;
+  }
+  .sort-btn {
+    font-size: 0.5rem;
+    height: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  .search-sort{
-    gap: 20px;
-    height:2rem;
-  }
-  .sort-btn {
-    font-size: 0.5rem;
-    height:2rem;
     width: 80px;
-    border-radius: 4px;
+    margin-left: 0;
   }
-  .search-bar {
+  .search-sort .input-fieldsearch-bar{
+    width: 80px;
+    font-size: 0.5rem;
+  }
+
+  .search-sort .search-bar {
     border: 1px solid #ccc;
     border-radius: 4px;
-    height:2rem;
+    height: 1rem;
+    font-size: 0.5rem;
   }
   .user-table {
     width: 100%;
-    font-size: 0.75rem;
+    font-size: 0.5rem;
   }
   .user-table th,
   .user-table td {
@@ -166,10 +174,10 @@ body, html {
     word-wrap: break-word;
   }
   .edit .action-btn.delete{
-    font-size: 0.75rem;
+    font-size: 0.5rem;
   }
   .validation-error {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     text-align: center;
   }
 }

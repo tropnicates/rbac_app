@@ -112,12 +112,15 @@ button:hover {
 
 @media (max-width: 768px) {
   .permissions-container {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   .permissions-header{
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .role-table th, .role-table td {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
+  }
+  .role-table-header {
+    font-size:0.5rem;
   }
 }
