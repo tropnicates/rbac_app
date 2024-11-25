@@ -13,26 +13,23 @@
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
 .modal-overlay.open {
   visibility: visible;
   opacity: 1;
 }
-
 .modal-container {
   background-color: #ffffff;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   animation: slideIn 0.3s ease;
 }
-
 .modal-header {
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 600;
   padding: 16px;
   background-color: #f0f0f0;
@@ -40,125 +37,84 @@
   text-align: center;
   color: #333;
 }
-
 .modal-container form {
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .modal-container input {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 4px;
+  font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease;
 }
-
 .modal-container input:focus {
   border-color: #357ABD;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
-
 .modal-buttons {
   display: flex;
   justify-content: space-between;
   gap: 10px;
 }
-
 .modal-buttons button {
   flex: 1;
   padding: 12px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .modal-buttons button[type="submit"] {
   background-color: #357ABD;
   color: #ffffff;
 }
-
 .modal-buttons button[type="submit"]:hover {
   background-color: #357ABD;
 }
-
 .modal-buttons button[type="button"] {
   background-color: #f0f0f0;
   color: #333;
 }
-
 .modal-buttons button[type="button"]:hover {
   background-color: #ddd;
 }
-
 .modal-close {
   position: absolute;
   top: 16px;
   right: 16px;
   background: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 1rem;
   cursor: pointer;
   color: #888;
   transition: color 0.3s ease;
 }
-
 .modal-close:hover {
   color: #333;
 }
 
 @media screen and (max-width: 768px) {
   .modal-container {
-    width: 95%;
+    width: 100%;
   }
-
   .modal-header {
-    font-size: 18px;
+    font-size: 1rem;
     padding: 12px;
   }
-
   .modal-container input {
-    font-size: 14px;
+    font-size: 1rem;
     padding: 10px;
   }
 
   .modal-buttons button {
-    font-size: 14px;
+    font-size: 1rem;
     padding: 10px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .modal-header {
-    font-size: 16px;
-  }
-
-  .modal-container input {
-    font-size: 12px;
-    padding: 8px;
-  }
-
-  .modal-buttons button {
-    font-size: 12px;
-    padding: 8px;
-    width: 50px;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
   }
 }

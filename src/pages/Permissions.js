@@ -66,7 +66,7 @@ const Permissions = () => {
 
   return (
     <div className="permissions-container">
-      <div className="permissions-header">Role and Permission Management</div>
+      <div className="permissions-header">Dynamic Role Management</div>
       <RoleTable
         roles={roles}
         onEditRole={handleEditRole}

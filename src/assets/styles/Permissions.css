@@ -1,10 +1,7 @@
 .permissions-container {
-  max-width: 900px;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,41 +13,33 @@
   margin-bottom: 20px;
   text-align: center;
 }
-
 .role-table-container {
   width: 100%;
   margin-bottom: 20px;
 }
-
 .role-table-header {
   font-weight: bold;
   color: #357ABD;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-bottom: 10px;
 }
-
 .role-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
-
 .role-table th, .role-table td {
   padding: 10px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
 }
-
 .role-table th {
   background-color: #357ABD;
   color: #fff;
 }
-
 .role-table tr:hover {
   background-color: #f1f1f1;
 }
-
 button {
   background-color: #357ABD;
   color: white;
@@ -72,7 +61,6 @@ button:hover {
   gap: 15px; 
   padding: 10px;
 }
-
 .checkbox-label {
   display: flex;
   align-items: center;
@@ -81,12 +69,10 @@ button:hover {
   color: #555;
   cursor: pointer;
 }
-
 .checkbox-label input[type="checkbox"] {
   accent-color: #357ABD; 
   cursor: pointer;
 }
-
 .permissions-row {
   display: flex;
   justify-content: space-between;
@@ -97,11 +83,9 @@ button:hover {
   margin-bottom: 10px;
   transition: background-color 0.3s ease;
 }
-
 .permissions-row:hover {
   background-color: #f9fafc;
 }
-
 .permission-actions button {
   margin-left: auto;
   background-color: #357ABD;
@@ -111,7 +95,6 @@ button:hover {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .permission-actions button:hover {
   background-color: #357ABD;
 }
@@ -119,79 +102,22 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #357ABD; 
   cursor: pointer;
 }
-
 .checkbox-label:hover {
   color: #357ABD;
 }
 
-
-
 @media (max-width: 768px) {
   .permissions-container {
-    padding: 15px;
     margin-top: 3rem;
   }
-
-  .permissions-header {
+  .permissions-header{
     font-size: 2rem;
-    margin-bottom: 20px;
   }
-
   .role-table th, .role-table td {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-
-  .permission-item button {
-    font-size: 0.8rem;
-    padding: 6px 12px;
-  }
-
-  .permissions-checkboxes {
-    gap: 12px;
-  }
-
-  input {
-    padding: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .permissions-container {
-    padding: 10px;
-    margin-top: 3rem;
-  }
-
-  .permissions-header {
-    font-size: 1.4rem;
-  }
-
-  .permission-list {
-    gap: 5px;
-  }
-
-  .permission-item {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  .permission-item button {
-    margin-top: 10px;
-    font-size: 0.75rem;
-  }
-
-  .role-table th, .role-table td {
-    font-size: 0.8rem;
-    padding: 8px;
-  }
-
-  button {
-    font-size: 0.9rem;
-    padding: 5px 5px;
+    font-size: 1rem;
   }
 }
