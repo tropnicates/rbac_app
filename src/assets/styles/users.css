@@ -156,6 +156,8 @@ body, html {
   .search-sort .input-fieldsearch-bar{
     width: 80px;
     font-size: 0.5rem;
+    height: 1rem;
+
   }
 
   .search-sort .search-bar {
