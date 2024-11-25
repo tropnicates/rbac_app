@@ -17,9 +17,9 @@ const Roles = () => {
     },
     {
       id: 3,
-      name: "Admin",
+      name: "Instructor",
       description: "Limited access",
-      permissions: ["Read", "Write", "Delete"]
+      permissions: ["Read", "Write"]
     },
     {
       id: 4,
