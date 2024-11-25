@@ -112,7 +112,7 @@ button:hover {
 
 @media (max-width: 768px) {
   .permissions-container {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   .permissions-header{
     font-size: 2rem;
