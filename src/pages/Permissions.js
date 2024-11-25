@@ -14,15 +14,16 @@ const Permissions = () => {
       permissions: ["Read", "Write", "Delete"]
     },
     {
+      id: 3,
+      name: "Faculty",
+      permissions: ["Read", "Write"]
+    },
+    {
       id: 2,
       name: "User",
       permissions: ["Read"]
-    },
-    {
-      id: 3,
-      name: "Faculty",
-      permissions: ["Read", "Write", "Delete"]
     }
+  
   ]);
   const [modalOpen, setModalOpen] = useState(false);
   const [editingRole, setEditingRole] = useState(null);
