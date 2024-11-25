@@ -54,15 +54,11 @@
 }
 
 @media (max-width: 768px) {
-  .permissions-list {
-    padding: 1rem;
-  }
   .container-list {
     font-size: 1rem;
   }
   .role-permissions {
     gap: 1rem;
-    padding: 1rem;
   }
   .role {
     font-size: 1rem;

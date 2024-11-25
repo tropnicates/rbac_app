@@ -1,5 +1,4 @@
 import React from "react";
-import "../assets/styles/RoleTable.css"
 
 const RoleTable = ({ roles, onEditRole, onDeleteRole }) => {
   return (
@@ -19,8 +18,8 @@ const RoleTable = ({ roles, onEditRole, onDeleteRole }) => {
               <td>{role.name}</td>
               <td>{role.permissions.join(", ")}</td>
               <td>
-  <button className="btn-edit" onClick={() => onEditRole(role.id)}>Edit</button>
-  <button className="btn-delete" onClick={() => onDeleteRole(role.id)}>Delete</button>
+  <button className="action-btn edit" onClick={() => onEditRole(role.id)}>Edit</button>
+  <button className="action-btn delete" onClick={() => onDeleteRole(role.id)}>Delete</button>
 </td>
 
             </tr>

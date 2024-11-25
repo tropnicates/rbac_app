@@ -53,7 +53,6 @@
   text-align: left;
   padding: 10px;
   border-bottom: 1px solid #ddd;
-  font-weight: 0.5rem;
 }
 .role-table th {
   background-color: #357ABD;
@@ -134,14 +133,10 @@
   }
   .action-btn.edit,
   .action-btn.delete {
+    font-size: 0.75rem;
     width: 4rem;
   }
   .action-btn.edit {
     margin-bottom: 5px;
   }
-  .role-table th,
-  .role-table td {
-    font-size: 0.75rem;
-  }
-
 }

@@ -118,6 +118,6 @@ button:hover {
     font-size: 2rem;
   }
   .role-table th, .role-table td {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 }
