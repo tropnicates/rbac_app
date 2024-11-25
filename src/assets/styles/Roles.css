@@ -72,15 +72,31 @@
 }
 .action-btn.edit {
   background-color: #FFD700;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .action-btn.edit:hover {
   background-color: #357ABD;
+  transform: scale(1.05);
 }
 .action-btn.delete {
   background-color: #B00008;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .action-btn.delete:hover {
   background-color:  #357ABD;
+  transform: scale(1.05);
+}
+.action-btn.edit:active,
+.action-btn.delete:active{
+  transform: scale(0.95);
+  box-shadow: none;
+}
+.action-btn.edit:focus,
+.action-btn.action-btn.delete:focus{
+  outline: 2px solid #ff9800;
+  outline-offset: 2px;
 }
 .permissions {
   display: flex;
