@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../assets/styles/login.css";
-const LoginUser = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [loggedInUser, setLoggedInUser] = useState(null); 
+const LoginAdmin = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loggedInAdmin, setLoggedInAdmin] = useState(null);
   const navigate = useNavigate();
   const handleSubmit = (e) => {
-    e.preventDefault();
-    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-    const user = existingUsers.find(
-      (user) => user.email === email && user.password === password
+    e.preventDefault();    
+    const existingAdmins = JSON.parse(localStorage.getItem('admins')) || [];
+    const admin = existingAdmins.find(
+      (admin) => admin.email === email && admin.password === password
     );
-    if (user) {
-      setLoggedInUser(user); 
-      // alert('Login successful!');
-    } else {
+    if (admin) {
+      setLoggedInAdmin(admin); 
+      alert('Login successful!');
+    } else{
       alert('Invalid email or password!');
     }
   };
   return (
     <div className="login-container">
-      <div className="admin">User Login</div>
-      {loggedInUser ? (
+      <div className="admin">Admin Login</div>
+      {loggedInAdmin ? (
         <div className="logged-in-section">
-          <div className='admin'>Welcome, {loggedInUser.name}!</div>
+          <div className='admin'>Welcome, {loggedInAdmin.name}!</div>
           <div className='subtitle'>You are successfully logged in.</div>
           <Link 
-            to="/login/user/edit" 
-            state={{ user: loggedInUser }} 
+            to="/login/admin/edit" 
+            state={{ user: loggedInAdmin }} 
             className="button edit-link"
           >
             Edit Your Details
@@ -56,11 +56,11 @@ const LoginUser = () => {
       </form></div>
       )}
 
-      {!loggedInUser && (
+      {!loggedInAdmin && (
         <div className="register-now">
           <p>
             First time?{' '}
-            <Link to="/register/user" className="register-link">
+            <Link to="/register/admin" className="register-link">
               Register Now
             </Link>
           </p>
@@ -70,4 +70,4 @@ const LoginUser = () => {
   );
 };
 
-export default LoginUser;
+export default LoginAdmin;

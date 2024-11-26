@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "../assets/styles/login.css";
-
 const RegisterUser = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -9,11 +8,9 @@ const RegisterUser = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [nameError, setNameError] = useState('');
   const navigate = useNavigate();
-
   const handleNameChange = (e) => {
     const value = e.target.value;
     const regex = /^[a-zA-Z\s]*$/; 
-
     if (!regex.test(value)) {
       setNameError('Name should contain only alphabets');
     } else {
@@ -21,36 +18,28 @@ const RegisterUser = () => {
     }
     setName(value);
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (nameError) {
       alert('Please correct the name field');
       return;
     }
-
     if (password !== confirmPassword) {
       alert('Passwords do not match');
       return;
     }
-
     const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
     const isEmailExists = existingUsers.some((user) => user.email === email);
-
     if (isEmailExists) {
       alert('Email is already registered');
       return;
     }
-
     const newUser = { name, email, password };
     const updatedUsers = [...existingUsers, newUser];
     localStorage.setItem('users', JSON.stringify(updatedUsers));
-
-    alert('Registration successful!');
+    // alert('Registration successful!');
     navigate('/login/user');
   };
-
   return (
     <div className="login-container">
       <div className="admin">Register as User</div>
@@ -90,7 +79,6 @@ const RegisterUser = () => {
         </button>
       </form>
       </div>
-
       <div className="register-now">
         <p>
           Already have an account?{' '}
@@ -102,5 +90,4 @@ const RegisterUser = () => {
     </div>
   );
 };
-
 export default RegisterUser;

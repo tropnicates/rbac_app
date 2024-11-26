@@ -1,34 +1,26 @@
 import React, { useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../assets/styles/login.css";
 
 const LoginAdmin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [redirect, setRedirect] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const adminData = JSON.parse(localStorage.getItem("adminData"));
+    const existingAdmins = JSON.parse(localStorage.getItem('admins')) || [];
+    const admin = existingAdmins.find(
+      (admin) => admin.email === email && admin.password === password
+    );
     
-    if (!adminData) {
-      alert("No admin registered! Please register first.");
-      return;
-    }
-
-    if (email === adminData.email && password === adminData.password) {
-      localStorage.setItem("isAuthenticated", "true");
-      setRedirect(true);
+    if (admin) {
+      // alert('Login successful!');
+      navigate("/admin");  
     } else {
-      alert("Invalid email or password!");
+      alert('Invalid email or password!');
     }
   };
-
-  if (redirect) {
-    return <Navigate to="/admin" />;
-  }
 
   return (
     <div className="login-container">
