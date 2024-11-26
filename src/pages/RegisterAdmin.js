@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../assets/styles/login.css";
 
 const RegisterAdmin = () => {
@@ -7,25 +7,51 @@ const RegisterAdmin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [redirect, setRedirect] = useState(false);
+  const [nameError, setNameError] = useState("");
+  const navigate = useNavigate();
+
+  const handleNameChange = (e) => {
+    const value = e.target.value;
+    const regex = /^[a-zA-Z\s]*$/;
+
+    if (!regex.test(value)) {
+      setNameError("Name should contain only alphabets.");
+    } else {
+      setNameError("");
+    }
+    setName(value);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (nameError) {
+      alert("Please correct the name field.");
+      return;
+    }
 
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
 
-    const adminData = { name, email, password };
-    localStorage.setItem("adminData", JSON.stringify(adminData));
-    alert("Registration successful!");
-    setRedirect(true);
-  };
+    // Retrieve any existing admin data
+    const existingAdmins = JSON.parse(localStorage.getItem("admins")) || [];
+    const isEmailExists = existingAdmins.some((admin) => admin.email === email);
 
-  if (redirect) {
-    return <Navigate to="/login/admin" />;
-  }
+    if (isEmailExists) {
+      alert("Email is already registered.");
+      return;
+    }
+
+    // Save new admin data
+    const newAdmin = { name, email, password };
+    const updatedAdmins = [...existingAdmins, newAdmin];
+    localStorage.setItem("admins", JSON.stringify(updatedAdmins));
+
+    alert("Registration successful!");
+    navigate("/login/admin");
+  };
 
   return (
     <div className="login-container">
@@ -36,9 +62,10 @@ const RegisterAdmin = () => {
             type="text"
             placeholder="Enter your Name"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={handleNameChange}
             required
           />
+          {nameError && <p className="error-message">{nameError}</p>}
           <input
             type="email"
             placeholder="Enter your email"
@@ -60,7 +87,9 @@ const RegisterAdmin = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
           />
-          <button className="button" type="submit">Register</button>
+          <button className="button" type="submit">
+            Register
+          </button>
         </form>
       </div>
       <div className="register-now">
