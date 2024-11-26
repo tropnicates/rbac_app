@@ -8,7 +8,6 @@ export const validateUserInput = (userData) => {
   if (!emailRegex.test(email)) {
     return { isValid: false, message: "Invalid email format." };
   }
-
   return { isValid: true, message: "" };
 };
 
