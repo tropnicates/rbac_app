@@ -10,17 +10,17 @@ const Dashboard = () => {
         <div className="dashboard-subtitle">Manage users, roles, and permissions efficiently.</div>
       </div>
       <div className="dashboard-links">
-        <Link to="/admin/dashboard/users" className="dashboard-card">
+        <Link to="/users" className="dashboard-card">
           <span className="icon">👤</span>
           <div className="card-title">Users Management</div>
           <div className="card-description">View and manage users, assign roles, and more.</div>
         </Link>
-        <Link to="/admin/dashboard/permissions" className="dashboard-card">
+        <Link to="/permissions" className="dashboard-card">
           <span className="icon">🔐</span>
           <div className="card-title">Permissions Management</div>
           <div className="card-description">Customize permissions for users and roles dynamically.</div>
         </Link>
-        <Link to="/admin/dashboard/roles" className="dashboard-card">
+        <Link to="/roles" className="dashboard-card">
           <span className="icon">📋</span>
           <div className="card-title">Role Management</div>
           <div className="card-description">Create and edit roles, define permissions for each role.</div>

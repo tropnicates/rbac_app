@@ -23,17 +23,17 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/admin/dashboard/users" className="sidebar-link" onClick={toggleSidebar}>
+            <Link to="/admin/users" className="sidebar-link" onClick={toggleSidebar}>
               Users
             </Link>
           </li>
           <li>
-            <Link to="/admin/dashboard/roles" className="sidebar-link" onClick={toggleSidebar}>
+            <Link to="/admin/roles" className="sidebar-link" onClick={toggleSidebar}>
               Roles
             </Link>
           </li>
           <li>
-            <Link to="/admin/dashboard/permissions" className="sidebar-link" onClick={toggleSidebar}>
+            <Link to="/admin/permissions" className="sidebar-link" onClick={toggleSidebar}>
               Permissions
             </Link>
           </li>

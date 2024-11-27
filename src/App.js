@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home from './pages/Home';
 import LoginUser from './pages/LoginUser';
@@ -9,18 +9,12 @@ import Users from "./pages/Users";
 import Roles from "./pages/Roles";
 import Permissions from "./pages/Permissions";
 import Sidebar from "./components/Sidebar";
-import RegisterUser from "./pages/RegisterUser";
-import EditUserPage from "./pages/EditUserPage";
+import RegisterUser from "./pages/RegisterUser"
+import EditUserPage from "./pages/EditUserPage"
 import "./App.css";
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  // Check localStorage authentication status on app load
-  useEffect(() => {
-    const authStatus = localStorage.getItem("isAuthenticated") === "true";
-    setIsAuthenticated(authStatus);
-  }, []);
+  const isAuthenticated = localStorage.getItem("isAuthenticated"); 
 
   return (
     <Router>
@@ -29,13 +23,13 @@ const App = () => {
         <Route path="/login/user" element={<LoginUser />} />
         <Route path="/login/admin" element={<LoginAdmin />} />
         <Route path="/register/admin" element={<RegisterAdmin />} />
-        <Route path="/register/user" element={<RegisterUser />} />
-        <Route path="/login/user/edit" element={<EditUserPage />} />
+        <Route path="/register/user" element={<RegisterUser/>}/>
+        <Route path="/login/user/edit" element={<EditUserPage/>}/>
 
         {isAuthenticated ? (
-          <Route path="/admin/dashboard*" element={<AdminLayout />} />
+          <Route path="/admin/*" element={<AdminLayout />} /> 
         ) : (
-          <Route path="/admin/dashboard*" element={<Navigate to="/login/admin" replace />} />
+          <Route path="/admin/*" element={<Navigate to="/login/admin" replace />} />
         )}
       </Routes>
     </Router>
