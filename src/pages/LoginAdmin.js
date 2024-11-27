@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../assets/styles/login.css";
-
-const LoginAdmin = () => {
+const LoginAdmin = ({ setIsAuthenticated }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -10,7 +9,7 @@ const LoginAdmin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const trimmedEmail = email.trim().toLowerCase(); 
+    const trimmedEmail = email.trim().toLowerCase();
     const existingAdmins = JSON.parse(localStorage.getItem("admins") || "[]");
 
     const admin = existingAdmins.find(
@@ -19,9 +18,9 @@ const LoginAdmin = () => {
     );
 
     if (admin) {
-      localStorage.setItem("isAuthenticated", "true"); 
-      alert("Login successful!");
-      navigate("/admin/dashboard"); 
+      localStorage.setItem("isAuthenticated", "true");
+      setIsAuthenticated(true); // Update state
+      navigate("/admin/dashboard"); // Direct navigation
     } else {
       alert("Invalid email or password!");
     }
