@@ -33,9 +33,9 @@ const App = () => {
         <Route path="/login/user/edit" element={<EditUserPage />} />
 
         {isAuthenticated ? (
-          <Route path="/admin/*" element={<AdminLayout />} />
+          <Route path="/admin/dashboard*" element={<AdminLayout />} />
         ) : (
-          <Route path="/admin/*" element={<Navigate to="/login/admin" replace />} />
+          <Route path="/admin/dashboard*" element={<Navigate to="/login/admin" replace />} />
         )}
       </Routes>
     </Router>

@@ -14,7 +14,6 @@ const LoginUser = () => {
     );
     if (user) {
       setLoggedInUser(user); 
-      // alert('Login successful!');
     } else {
       alert('Invalid email or password!');
     }

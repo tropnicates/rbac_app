@@ -20,7 +20,6 @@ const LoginAdmin = () => {
 
     if (admin) {
       localStorage.setItem("isAuthenticated", "true"); 
-      // alert("Login successful!");
       navigate("/admin/dashboard"); 
     } else {
       alert("Invalid email or password!");

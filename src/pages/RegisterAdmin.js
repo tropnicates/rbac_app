@@ -10,7 +10,6 @@ const RegisterAdmin = () => {
   const [nameError, setNameError] = useState("");
   const navigate = useNavigate();
 
-  // Validate name to allow only alphabets and spaces
   const handleNameChange = (e) => {
     const value = e.target.value;
     const regex = /^[a-zA-Z\s]*$/;
@@ -37,10 +36,8 @@ const RegisterAdmin = () => {
       return;
     }
 
-    // Retrieve existing admins from localStorage or default to an empty array
     const existingAdmins = JSON.parse(localStorage.getItem("admins") || "[]");
 
-    // Check if email is already registered
     const isEmailExists = existingAdmins.some(
       (admin) => admin.email === trimmedEmail
     );
@@ -53,7 +50,6 @@ const RegisterAdmin = () => {
     const newAdmin = { name, email: trimmedEmail, password };
     const updatedAdmins = [...existingAdmins, newAdmin];
     localStorage.setItem("admins", JSON.stringify(updatedAdmins));
-    // alert("Registration successful!");
     navigate("/login/admin"); 
   };
 
