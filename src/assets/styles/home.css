@@ -1,73 +1,72 @@
 .home-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+.home-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.btnone {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btnone > div {
+  width: 300px;
+  height: 50px;
+  font-size: 1.5rem; 
+  background-color: #3190ef;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.btnone > div:hover {
+  background-color: #357ABD;
+  transform: scale(1.05); 
+}
+
+.btnone > div:active {
+  transform: scale(0.95);
+  box-shadow: none; 
+}
+
+.btnone > div:focus {
+  background-color: #357ABD;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2rem;
   }
- .home-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 30px;
-  }
-  
-  .btnone {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
+
   .btnone > div {
-    width: 300px;
-    height: 50px;
-    font-size: 1.5rem; 
-    background-color: #3190ef;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    width: 90%; 
+    font-size: 1.2rem; 
   }
-  
-  .btnone > div:hover {
-    background-color: #357ABD;
-    transform: scale(1.05); 
+}
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.8rem; 
   }
-  
-  .btnone > div:active {
-    transform: scale(0.95);
-    box-shadow: none; 
+  .btnone > div {
+    font-size: 1rem; 
+    height: 45px; 
   }
-  
-  .btnone > div:focus {
-    background-color: #357ABD;
-    outline-offset: 2px;
-  }
-  
-  @media (max-width: 768px) {
-    .home-title {
-      font-size: 2rem;
-    }
-  
-    .btnone > div {
-      width: 90%; 
-      font-size: 1.2rem; 
-    }
-  }
-  @media (max-width: 480px) {
-    .home-title {
-      font-size: 1.8rem; 
-    }
-    .btnone > div {
-      font-size: 1rem; 
-      height: 45px; 
-    }
-  }
-  
+}
