@@ -9,16 +9,21 @@ const LoginAdmin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const existingAdmins = JSON.parse(localStorage.getItem('admins')) || [];
+
+    const trimmedEmail = email.trim().toLowerCase(); 
+    const existingAdmins = JSON.parse(localStorage.getItem("admins") || "[]");
+
     const admin = existingAdmins.find(
-      (admin) => admin.email === email && admin.password === password
+      (admin) =>
+        admin.email === trimmedEmail && admin.password === password
     );
-    
+
     if (admin) {
-      // alert('Login successful!');
-      navigate("/admin");  
+      localStorage.setItem("isAuthenticated", "true"); 
+      // alert("Login successful!");
+      navigate("/admin/dashboard"); 
     } else {
-      alert('Invalid email or password!');
+      alert("Invalid email or password!");
     }
   };
 
@@ -29,19 +34,21 @@ const LoginAdmin = () => {
         <form onSubmit={handleSubmit}>
           <input
             type="email"
-            placeholder="Enter your email"
+            placeholder="Enter your Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
           <input
             type="password"
-            placeholder="Enter your password"
+            placeholder="Enter your Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button className="button" type="submit">Login</button>
+          <button className="button" type="submit">
+            Login
+          </button>
         </form>
       </div>
       <div className="register-now">
