@@ -51,6 +51,21 @@
   outline-offset: 2px;
 }
 
+.input-error {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+
 @media (max-width: 768px) {
   .home-title {
     font-size: 2rem;
